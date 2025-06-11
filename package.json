@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "1.8.122",
+  "version": "1.8.123",
   "description": "dphelper devtools, store and state management for developers by Dario Passariello",
   "copyright": "Dario Passariello",
   "license": "MIT",
@@ -133,11 +133,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/passariello/dphelper/",
-    "help": "https://github.com/passariello/dphelper#readme"
+    "url": "https://github.com/a51-dev/a51.dphelper.public",
+    "help": "https://github.com/a51-dev/a51.dphelper.public#readme"
   },
   "bugs": {
-    "url": "https://github.com/passariello/dphelper/issues"
+    "url": "https://github.com/a51-dev/a51.dphelper.public/issues"
   },
   "funding": [
     {
@@ -166,28 +166,25 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.27.1",
+    "@typescript-eslint/eslint-plugin": "8.34.0",
+    "@typescript-eslint/parser": "8.34.0",
+    "@babel/eslint-parser": "^7.27.5",
     "@eslint/js": "9.28.0",
-    "@types/jest": "^29.5.14",
-    "@types/node": "^22.15.29",
+    "@types/node": "^24.0.0",
     "@types/webpack-env": "1.18.8",
-    "@typescript-eslint/eslint-plugin": "8.33.0",
-    "@typescript-eslint/parser": "8.33.0",
     "copy-webpack-plugin": "^13.0.0",
-    "eslint": "9.28.0",
     "crypto-js": "4.2.0",
+    "eslint": "9.28.0",
     "file-loader": "6.2.0",
     "jquery": "3.7.1",
     "terser-webpack-plugin": "^5.3.14",
-    "jest": "^29.7.0",
     "ts-loader": "^9.5.2",
-    "ts-jest": "29.3.4",
     "ts-node": "10.9.2",
     "tslib": "^2.8.1",
     "typescript": "5.8.3",
     "webpack": "^5.99.9",
     "webpack-cli": "6.0.1",
-    "webpack-dev-server": "^5.2.1"
+    "webpack-dev-server": "^5.2.2"
   },
   "jsnext:main": "./index.js",
   "types": "./index.d.ts",
