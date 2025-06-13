@@ -11,6 +11,8 @@
 ![dphelper](https://img.shields.io/badge/dphelper-npm-green?logo=dphelper&logoColor=white)
 ![browser extension](https://img.shields.io/badge/browser%20extension-beta-orange.svg)
 
+[![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
+
 <!--
 [![dphelper](https://snyk.io/advisor/npm-package/dphelper/badge.svg)](https://snyk.io/advisor/npm-package/dphelper)
 [![Socket Badge](https://socket.dev/api/badge/npm/package/dphelper)](https://socket.dev/npm/package/dphelper)
@@ -53,7 +55,7 @@ export default App;
 
 ## Live Demo
 
-[https://a51.dev/tests/](https://a51.dev/tests/)
+[https://tests.a51.dev/](https://tests.a51.dev/)
 
 You can see an HTML version where dpHelper and LayerPro work together seamlessly. dpHelper is compatible with a variety of frontend libraries, including:
 * HTML
@@ -64,12 +66,12 @@ You can see an HTML version where dpHelper and LayerPro work together seamlessly
 ## Documentation
 
 You can see:
-- [State](https://passariello.gitbook.io/dphelper-devtools/general/state)
-- [Store](https://passariello.gitbook.io/dphelper-devtools/general/store)
-- [Observer](https://passariello.gitbook.io/dphelper-devtools/general/observer)
-- [List of functions](https://passariello.gitbook.io/dphelper-devtools/general/tools)
+- [State](https://a51.gitbook.io/dphelper/general/state)
+- [Store](https://a51.gitbook.io/dphelper/general/store)
+- [Observer](https://a51.gitbook.io/dphelper/general/observer)
+- [List of functions](https://a51.gitbook.io/dphelper/general/tools)
 
-You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://passariello.gitbook.io/dphelper-devtools).
+You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://a51.gitbook.io/dphelper).
 
 ## Usage
 
@@ -301,10 +303,10 @@ The dpHelper browser extension allows you to manage your application's dpHelper 
 
 [MIT - https://en.wikipedia.org/wiki/MIT_License](https://en.wikipedia.org/wiki/MIT_License)
 
-- [LICENCE](https://passariello.gitbook.io/dphelper-devtools/documents/license)
-- [CODE OF CONDUCT](https://passariello.gitbook.io/dphelper-devtools/documents/code_of_conduct)
-- [SECURITY](https://passariello.gitbook.io/dphelper-devtools/documents/security)
-- [CONTRIBUTING](https://passariello.gitbook.io/dphelper-devtools/documents/contributing)
+- [LICENCE](https://a51.gitbook.io/dphelper/documents/license)
+- [CODE OF CONDUCT](https://a51.gitbook.io/dphelper/documents/code_of_conduct)
+- [SECURITY](https://a51.gitbook.io/dphelper/documents/security)
+- [CONTRIBUTING](https://a51.gitbook.io/dphelper/documents/contributing)
 
 ---
 

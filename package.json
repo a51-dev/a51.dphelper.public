@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "1.8.124",
+  "version": "1.8.126",
   "description": "dphelper devtools, store and state management for developers by Dario Passariello",
   "copyright": "Dario Passariello",
   "license": "MIT",
@@ -44,7 +44,7 @@
     },
     "cdn": {}
   },
-  "homepage": "https://passariello.gitbook.io/dphelper-devtools/",
+  "homepage": "https://a51.gitbook.io/dphelper",
   "author": {
     "name": "Dario Passariello",
     "url": "https://dario.passariello.ca/",
@@ -150,28 +150,18 @@
   ],
   "scripts": {
     "watch": "webpack --watch --progress --profile --color --mode=development --config webpack.ts",
-    "build": "webpack --progress --profile --color --mode=production --config webpack.ts",
-    "-": "--------------",
-    "git": "git push -f -u && git add . && git commit -m \"update\" && git pull && git push -f",
-    "--": "-------------",
-    "tsc": "tsc -b",
-    "eslint": "eslint .",
-    "sandworm": "sandworm",
-    "---": "------------",
-    "pack": "cd dist && npm pack",
-    "backup": "cd mcp/batch && backup.bat",
-    "update": "cd mcp/javascripts && node npmUpdate.js"
+    "build": "webpack --progress --profile --color --mode=production --config webpack.ts"
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "8.34.0",
-    "@typescript-eslint/parser": "8.34.0",
     "@babel/eslint-parser": "^7.27.5",
     "@eslint/js": "9.28.0",
-    "@types/node": "^24.0.0",
+    "@types/node": "^24.0.1",
     "@types/webpack-env": "1.18.8",
+    "@typescript-eslint/eslint-plugin": "8.34.0",
+    "@typescript-eslint/parser": "8.34.0",
     "copy-webpack-plugin": "^13.0.0",
     "crypto-js": "4.2.0",
     "eslint": "9.28.0",
