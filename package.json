@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "1.8.127",
+  "version": "1.8.128",
   "description": "dphelper devtools, store and state management for developers by Dario Passariello",
   "copyright": "Dario Passariello",
   "license": "MIT",
@@ -155,27 +155,6 @@
   "engines": {
     "node": ">=18"
   },
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.27.5",
-    "@eslint/js": "9.28.0",
-    "@types/node": "^24.0.1",
-    "@types/webpack-env": "1.18.8",
-    "@typescript-eslint/eslint-plugin": "8.34.0",
-    "@typescript-eslint/parser": "8.34.0",
-    "copy-webpack-plugin": "^13.0.0",
-    "crypto-js": "4.2.0",
-    "eslint": "9.28.0",
-    "file-loader": "6.2.0",
-    "jquery": "3.7.1",
-    "terser-webpack-plugin": "^5.3.14",
-    "ts-loader": "^9.5.2",
-    "ts-node": "10.9.2",
-    "tslib": "^2.8.1",
-    "typescript": "5.8.3",
-    "webpack": "^5.99.9",
-    "webpack-cli": "6.0.1",
-    "webpack-dev-server": "^5.2.2"
-  },
   "jsnext:main": "./index.js",
   "types": "./index.d.ts",
   "typings": "./types/*",
@@ -186,5 +165,29 @@
     },
     "./package.json": "./package.json",
     "./*": "./*"
+  },
+  "dependencies": {
+    "dphelper.types": "0.0.6"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.27.5",
+    "@eslint/js": "9.29.0",
+    "@types/node": "^24.0.1",
+    "@types/webpack-env": "1.18.8",
+    "@typescript-eslint/eslint-plugin": "8.34.0",
+    "@typescript-eslint/parser": "8.34.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "crypto-js": "4.2.0",
+    "eslint": "9.29.0",
+    "file-loader": "6.2.0",
+    "jquery": "3.7.1",
+    "terser-webpack-plugin": "^5.3.14",
+    "ts-loader": "^9.5.2",
+    "ts-node": "10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "6.0.1",
+    "webpack-dev-server": "^5.2.2"
   }
 }
