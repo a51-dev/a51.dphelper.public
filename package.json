@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "1.8.128",
+  "version": "1.8.131",
   "description": "dphelper devtools, store and state management for developers by Dario Passariello",
   "copyright": "Dario Passariello",
   "license": "MIT",
@@ -165,9 +165,6 @@
     },
     "./package.json": "./package.json",
     "./*": "./*"
-  },
-  "dependencies": {
-    "dphelper.types": "0.0.6"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.27.5",
