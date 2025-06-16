@@ -104,7 +104,7 @@ require("dphelper");
 Note: You don't need to use npm install in this case, or you will get an error.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dphelper@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/dphelper"></script>
 ```
 
 ## The Best Way To Use State 💥
