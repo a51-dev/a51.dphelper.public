@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "1.8.131",
+  "version": "1.8.132",
   "description": "dphelper devtools, store and state management for developers by Dario Passariello",
   "copyright": "Dario Passariello",
   "license": "MIT",
@@ -186,5 +186,8 @@
     "webpack": "^5.99.9",
     "webpack-cli": "6.0.1",
     "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "dphelper.types": "0.0.7"
   }
 }
