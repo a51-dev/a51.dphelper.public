@@ -79,7 +79,7 @@ interface _dphelper {
   color: {
     hex: (c: any) => string
     toHex: (rgb: any) => string
-    toRGB: (c: any) => Array
+    toRGB: (c: any) => []
     oleColor: (c: any) => string
     gradient: (colorStart: any, colorEnd: any, colorCount: any) => any
 
@@ -415,8 +415,6 @@ type dphelper = _dphelper
 
 declare var arguments: any
 type arguments = any
-
-type process = {}
 
 ///////////////////
 

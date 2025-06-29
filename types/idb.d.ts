@@ -18,4 +18,4 @@ declare var idb: _idb
 declare var idbases: any
 
 type idb = _idb
-type idbases = Global
+type idbases = {}
