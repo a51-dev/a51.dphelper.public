@@ -512,13 +512,13 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Calculates the percentage of time elapsed.
 
 ### Tools
-- `dphelper.tools.getip()`
+- `dphelper.dev.getip()`
   <br> Gets the IP address.
-- `dphelper.tools.byteSize(bytes)`
+- `dphelper.dev.byteSize(bytes)`
   <br> Converts bytes to a human-readable format.
-- `dphelper.tools.zIndex()`
+- `dphelper.dev.zIndex()`
   <br> Gets the z-index.
-- `dphelper.tools.zeroToFalse(value)`
+- `dphelper.dev.zeroToFalse(value)`
   <br> Converts zero to false.
 
 ### Translators

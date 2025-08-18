@@ -18,19 +18,19 @@
 [![Socket Badge](https://socket.dev/api/badge/npm/package/dphelper)](https://socket.dev/npm/package/dphelper)
 -->
 
-## About 🔥
+## About
 
 dpHelper is a precise and complete collection of 190+ tools ready to use in all web/SaaS applications. State and Store Management are now easy, accessible everywhere in your application, including Ajax or React apps, without the need for extra files.
 
-1. __Single Source of Truth__: The application's entire state is held within a single object in one store, ensuring consistent and accessible state management throughout the app.
+1. **Single Source of Truth**: The application's entire state is held within a single object in one store, ensuring consistent and accessible state management throughout the app.
 
-2. __State is flexible__: State changes are facilitated exclusively through actions. These actions, which are straightforward JavaScript objects, delineate what has occurred. This methodology ensures that state changes remain predictable.
+2. **State is flexible**: State changes are facilitated exclusively through actions. These actions, which are straightforward JavaScript objects, delineate what has occurred. This methodology ensures that state changes remain predictable.
 
-3. __Changes are made with proxy handle function__: To define state changes, dpHelper employs pure functions as intermediaries. These functions accept the current state as input and produce a new state as output, ensuring predictability and ease of testing in the system.
+3. **Changes are made with proxy handle function**: To define state changes, dpHelper employs pure functions as intermediaries. These functions accept the current state as input and produce a new state as output, ensuring predictability and ease of testing in the system.
 
-### Example in React
+### 1. Example in React
 
-```javascript
+```js
 import { useEffect } from 'react';
 import 'dphelper';
 
@@ -58,6 +58,7 @@ export default App;
 [https://tests.a51.dev/](https://tests.a51.dev/)
 
 You can see an HTML version where dpHelper and LayerPro work together seamlessly. dpHelper is compatible with a variety of frontend libraries, including:
+
 * HTML
 * React
 * Vue
@@ -66,10 +67,11 @@ You can see an HTML version where dpHelper and LayerPro work together seamlessly
 ## Documentation
 
 You can see:
-- [State](https://a51.gitbook.io/dphelper/general/state)
-- [Store](https://a51.gitbook.io/dphelper/general/store)
-- [Observer](https://a51.gitbook.io/dphelper/general/observer)
-- [List of functions](https://a51.gitbook.io/dphelper/general/tools)
+
+* [State](https://a51.gitbook.io/dphelper/general/state)
+* [Store](https://a51.gitbook.io/dphelper/general/store)
+* [Observer](https://a51.gitbook.io/dphelper/general/observer)
+* [List of functions](https://a51.gitbook.io/dphelper/general/tools)
 
 You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://a51.gitbook.io/dphelper).
 
@@ -89,13 +91,13 @@ npm i dphelper@latest --save-dev
 
 Use it in the main root file (and only there):
 
-```javascript
+```js
 import "dphelper";
 ```
 
 or
 
-```javascript
+```js
 require("dphelper");
 ```
 
@@ -107,7 +109,7 @@ Note: You don't need to use npm install in this case, or you will get an error.
 <script src="https://cdn.jsdelivr.net/npm/dphelper"></script>
 ```
 
-## The Best Way To Use State 💥
+## The Best Way To Use State
 
 ### Using the "state" Function
 
@@ -119,7 +121,7 @@ _example:_
 
 You can use the browser's devtools console and type " **state.test = 'I am ready'** ". Every time you want to use '**test**' values, you need just recall **state.test**.
 
-```javascript
+```js
 // Set a state
 state.test = "I am ready" *
 
@@ -142,13 +144,13 @@ state.removeAll()
 
 ```
 
-### Observer 😎 for States
+### Observer for States
 
 **Note**: _Observer works only with states. Stores are excluded at the moment._
 
 If you want to run a function every time a state changes, you can use:
 
-```javascript
+```js
 /**
 * Observer is a non-cumulative listener,
 * triggered from customEvent / dispatch from state
@@ -164,9 +166,9 @@ PS: you need to use the name of state | store as string
 
 You can use it everywhere. Works like "useState" in React but with more flexibility (use one observer for each state!).
 
-### Example:
+### Example
 
-```javascript
+```js
 import 'dphelper';
 
 // Use the observer to log the changing state value
@@ -179,9 +181,9 @@ observer(
 setInterval(() => state.count = Date.now(), 5000);
 ```
 
-#### Another Simple Example:
+#### Another Simple Example
 
-```javascript
+```js
 import 'dphelper';
 
 // Set a state
@@ -213,7 +215,7 @@ When using dpHelper for permanent storage, you should use the **store**, which s
 
 3. **Remove all stored data:** Use store.removeAll() to securely remove all stored data from your application.
 
-```javascript
+```js
 // Set a store:
 store.set("test", { test: "test" })
 
@@ -227,9 +229,9 @@ store.remove("test") // Output: "ok"
 store.removeAll() // Output: "ok"
 ```
 
-### Example in React
+### 2. Example in React
 
-```javascript
+```js
 import { useEffect } from 'react';
 import 'dphelper';
 
@@ -265,7 +267,7 @@ function App() {
 export default App;
 ```
 
-## Console It!
+## Console It
 
 Type **dphelper** in the devtool console of your browser to have a look at all available tools that you can use! You can call these from everywhere without import (just one time in the main/root page).
 
@@ -303,11 +305,11 @@ The dpHelper browser extension allows you to manage your application's dpHelper 
 
 [MIT - https://en.wikipedia.org/wiki/MIT_License](https://en.wikipedia.org/wiki/MIT_License)
 
-- [LICENCE](https://a51.gitbook.io/dphelper/documents/license)
-- [CODE OF CONDUCT](https://a51.gitbook.io/dphelper/documents/code_of_conduct)
-- [SECURITY](https://a51.gitbook.io/dphelper/documents/security)
-- [CONTRIBUTING](https://a51.gitbook.io/dphelper/documents/contributing)
+* [LICENSE](https://a51.gitbook.io/dphelper/documents/license)
+* [CODE OF CONDUCT](https://a51.gitbook.io/dphelper/documents/code_of_conduct)
+* [SECURITY](https://a51.gitbook.io/dphelper/documents/security)
+* [CONTRIBUTING](https://a51.gitbook.io/dphelper/documents/contributing)
 
 ---
 
-Dario Passariello - dariopassariello@gmail.com, All rights reserved - Copyright (c) 2019 - 2024
+Dario Passariello - <dariopassariello@gmail.com>, All rights reserved - Copyright (c) 2019 - 2024
