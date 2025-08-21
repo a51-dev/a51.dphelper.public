@@ -1,15 +1,18 @@
 # All Functions List
 
 ## Overview
+
 This document provides a comprehensive list of all available functions in the `dphelper` library along with their descriptions.
 
 ## Functions
 
 ### Anchor
+
 - `dphelper.anchor.toOnClick(el)`
-  <br> Converts an element's href attribute to an onclick event.
+  <br/> Converts an element's href attribute to an onclick event.
 
 ### Array
+
 - `dphelper.array.find(array, key)`
   <br> Finds an element in an array by key.
 - `dphelper.array.unique(array)`
@@ -58,14 +61,17 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Generate a structured copy of an object.
 
 ### Audio
+
 - `dphelper.audio.play(url)`
   <br> Plays an audio file from a URL.
 
 ### Avoid
+
 - `dphelper.avoid.cache(uri)`
   <br> Caches a URI.
 
 ### Browser
+
 - `dphelper.browser.state(state, title, url)`
   <br> Changes the browser state.
 - `dphelper.browser.forw(times)`
@@ -84,6 +90,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Gets the status text for a status code.
 
 ### Check
+
 - `dphelper.check.url(url)`
   <br> Checks if a URL is valid.
 - `dphelper.check.version(v1, v2, opts)`
@@ -92,6 +99,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Gets the version of an npm package.
 
 ### Color
+
 - `dphelper.color.hex(c)`
   <br> Converts a color to hex format.
 - `dphelper.color.toHex(rgb)`
@@ -104,6 +112,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Generates a gradient between two colors.
 
 ### Console
+
 - `dphelper.console.info(name, message, fn)`
   <br> Logs an info message to the console.
 - `dphelper.console.stop(options?[])`
@@ -112,6 +121,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Converts console output to HTML.
 
 ### Cookie
+
 - `dphelper.cookie.set(params: { name, value, time?, path?: "/", sameSite?: "Lax", secure?: "Secure" | "false" })`
   <br> Sets a cookie.
 - `dphelper.cookie.get(name)`
@@ -122,6 +132,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Clears all cookies.
 
 ### Coords
+
 - `dphelper.coods.degreesToRadians(degrees)`
   <br> Converts degrees to radians.
 - `dphelper.coods.latToMeters(points)`
@@ -138,6 +149,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Maps degrees to pixels.
 
 ### Date
+
 - `dphelper.date.days(lang?)`
   <br> Returns the days of the week in a specified language.
 - `dphelper.date.months(lang?)`
@@ -188,6 +200,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Returns a list of time zones.
 
 ### Disable
+
 - `dphelper.disable.select(el?)`
   <br> Disables text selection.
 - `dphelper.disable.spellCheck(tmr?)`
@@ -204,6 +217,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Disables drag.
 
 ### Dispatch
+
 - `dphelper.dispatch.set(name, value?)`
   <br> Sets a dispatch event.
 - `dphelper.dispatch.listen(name, cb?, flag?)`
@@ -212,12 +226,14 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Removes a dispatch event.
 
 ### Element
+
 - `dphelper.element.fitScale(el, scale?, fit?)`
   <br> Fits an element to a scale.
 - `dphelper.element.scaleBasedOnWindow(elm, scale, fit)`
   <br> Scales an element based on the window size.
 
 ### Events
+
 - `dphelper.events.list(el)`
   <br> Lists all events on an element.
 - `dphelper.events.multi(element, eventNames, listenerListener)`
@@ -230,6 +246,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Gets the key, ctrl, alt, and shift status from a keyboard event.
 
 ### Form
+
 - `dphelper.form.serialize(form): { [key] }`
   <br> Serializes a form to an object.
 - `dphelper.form.confirmType(type, value)`
@@ -256,16 +273,19 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Sanitizes a string.
 
 ### Format
+
 - `dphelper.format.currency(value, locale?, currency?)`
   <br> Formats a value as currency.
 - `dphelper.format.phoneNumber(value, countryCode?)`
   <br> Formats a phone number.
 
 ### Imports
+
 - `dphelper.imports.file(elem, file)`
   <br> Imports a file.
 
 ### Json
+
 - `dphelper.json.counter(json, key?, val?)`
   <br> Counts occurrences in a JSON object.
 - `dphelper.json.toCsv(jsonInput)`
@@ -282,6 +302,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Sanitizes a JSON value.
 
 ### Load
+
 - `dphelper.load.all(context, cacheName?)`
   <br> Loads all modules in a context.
 - `dphelper.load.file(filePath)`
@@ -298,6 +319,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Converts a context to JSON.
 
 ### Logging
+
 - `dphelper.logging.list: { type; message }`
   <br> List of log messages.
 - `dphelper.logging.reg(txt)`
@@ -308,6 +330,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Logs an error message.
 
 ### Math
+
 - `dphelper.math.rnd()`
   <br> Generates a random number.
 - `dphelper.math.tmr()`
@@ -334,12 +357,14 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Checks if a number is prime.
 
 ### Memory
+
 - `dphelper.memory.lock(obj)`
   <br> Locks an object in memory.
 - `dphelper.memory.unlock(obj)`
   <br> Unlocks an object in memory.
 
 ### Object
+
 - `dphelper.obj.toArray(object)`
   <br> Converts an object to an array.
 - `dphelper.obj.replaceNullObjects(data)`
@@ -374,6 +399,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Generate a structured copy of an object.
 
 ### Path
+
 - `dphelper.path.rail()`
   <br> Returns the rail path.
 - `dphelper.path.hash()`
@@ -382,16 +408,19 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Parses the query string of a URL.
 
 ### Promise
+
 - `dphelper.promise.check(p)`
   <br> Checks if a value is a promise.
 - `dphelper.promise.resolve(data)`
   <br> Resolves a promise with data.
 
 ### Sanitize
+
 - `dphelper.sanitize.html(s)`
   <br> Sanitizes HTML.
 
 ### Screen
+
 - `dphelper.screen.fullScreen(el)`
   <br> Enables full screen mode for an element.
 - `dphelper.screen.toggle(el)`
@@ -400,6 +429,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Gets screen information.
 
 ### Scrollbar
+
 - `dphelper.scrollbar.custom(el, options)`
   <br> Customizes a scrollbar.
 - `dphelper.scrollbar.indicator(props)`
@@ -412,6 +442,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Scrolls to an element within a container.
 
 ### Security
+
 - `dphelper.security.uuid: { byVal(string); v4; v5 }`
   <br> Generates UUIDs.
 - `dphelper.security.hashPass(u, p, t?)`
@@ -428,10 +459,12 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Generates ULID (Universally Unique Lexicographically Sortable Identifier).
 
 ### Shortcut
+
 - `dphelper.shortcut.keys(e, trigger)`
   <br> Adds a keyboard shortcut.
 
 ### Socket
+
 - `dphelper.socket.info()`
   <br> Gets socket information.
 - `dphelper.socket.start(element, server)`
@@ -456,6 +489,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Lists all socket connections.
 
 ### SVG
+
 - `dphelper.svg.init(container, source1, source2, cb?)`
   <br> Initializes an SVG container.
 - `dphelper.svg.check()`
@@ -480,14 +514,17 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Converts an SVG element.
 
 ### System
+
 - `dphelper.svg.multiSplit()`
   <br> Splits a string into multiple parts.
 
 ### Terminal
+
 - `dphelper.terminal()`
   <br> Initializes a terminal.
 
 ### Text
+
 - `dphelper.text.trim(s, c, b, e)`
   <br> Trims a string.
 - `dphelper.text.capitalize(txt)`
@@ -506,12 +543,14 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Fits a text element to its container.
 
 ### Timer
+
 - `dphelper.timer.sleep(ms)`
   <br> Pauses execution for a specified time.
 - `dphelper.timer.percentage(start, end)`
   <br> Calculates the percentage of time elapsed.
 
 ### Tools
+
 - `dphelper.dev.getip()`
   <br> Gets the IP address.
 - `dphelper.dev.byteSize(bytes)`
@@ -522,10 +561,12 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Converts zero to false.
 
 ### Translators
+
 - `dphelper.translator.convertMatrixToScale(values)`
   <br> Converts a matrix to a scale.
 
 ### Trigger
+
 - `dphelper.trigger.click(elem)`
   <br> Triggers a click event.
 - `dphelper.trigger.change(elem)`
@@ -534,6 +575,7 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Triggers an input event.
 
 ### Type
+
 - `dphelper.type.of(p)`
   <br> Gets the type of a value.
 - `dphelper.type.instOfObj(p)`
@@ -544,10 +586,12 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Checks if a value is a boolean.
 
 ### UI
+
 - `dphelper.ui: null`
   <br> User interface operations.
 
 ### Window
+
 - `dphelper.window.enhancement()`
   <br> Enhances the window.
 - `dphelper.window.animationframe()`
@@ -566,4 +610,5 @@ This document provides a comprehensive list of all available functions in the `d
   <br> Gets the zoom level.
 
 ## License
+
 This project is licensed under the MIT License.

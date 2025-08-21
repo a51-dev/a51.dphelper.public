@@ -6,7 +6,7 @@
 */
 
 /**
-* idb is indexedDB semplification by dphelper
+* idb is indexedDB simplification by dphelper
 * @return IndexedDB editing and maintain.
 */
 

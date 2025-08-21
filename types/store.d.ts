@@ -1,6 +1,6 @@
 /*!
-  dphelper
-  Copyright (c) 2019 Dario Passariello <dariopassariello@gmail.com>
+  memorio
+  Copyright (c) 2025 Dario Passariello <dariopassariello@gmail.com>
   Licensed under MIT License, see
   https://dario.passariello.ca
 */
@@ -16,7 +16,7 @@ interface _store {
     * @example
     * store.set("test","example") // or Array, Object, Number, Functions...
     *
-    * @since dphelper 0.0.1
+    * @since memorio 0.0.1
     * @param name The String as name to define the store.
     * @param param The information taht you want to store (Any).
     * @return boolean
@@ -29,7 +29,7 @@ interface _store {
     * @example
     * store.get("test")
     *
-    * @since dphelper 0.0.1
+    * @since memorio 0.0.1
     * @param name The String as name to define the store.
   */
   get: (name: string) => any
@@ -41,7 +41,7 @@ interface _store {
     * store.delete("test")
     * store.remove("test")
     *
-    * @since dphelper 0.0.1
+    * @since memorio 0.0.1
     * @param name The String as name to define the store.
     * @return boolean
   */
@@ -55,7 +55,7 @@ interface _store {
     * store.clearAll()
     * store.removeAll()
     *
-    * @since dphelper 0.0.1
+    * @since memorio 0.0.1
     * @return boolean
   */
   clearAll: () => boolean
@@ -67,7 +67,7 @@ interface _store {
     * @example
     * store.quota()
     *
-    * @since dphelper 0.0.1
+    * @since memorio 0.0.1
     * @return values
   */
   quota: () => void
@@ -78,7 +78,7 @@ interface _store {
     * @example
     * store.size()
     *
-    * @since dphelper 0.0.1
+    * @since memorio 0.0.1
     * @return dimension in kb
   */
   size: () => number

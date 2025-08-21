@@ -1,6 +1,6 @@
 /*!
-  dphelper
-  Copyright (c) 2019 Dario Passariello <dariopassariello@gmail.com>
+  memorio
+  Copyright (c) 2025 Dario Passariello <dariopassariello@gmail.com>
   Licensed under MIT License, see
   https://dario.passariello.ca
 */
@@ -17,7 +17,7 @@ interface _observer {
   * @example
   * observer("myState", Function)
   *
-  * @since dphelper 1.0.6
+  * @since memorio 1.0.6
   */
   (stateName: string, callBack: any): any
 
@@ -27,7 +27,7 @@ interface _observer {
   * @example
   * observer.list()
   *
-  * @since dphelper 1.0.6
+  * @since memorio 1.0.6
   */
   readonly list?: () => void
 
@@ -37,7 +37,7 @@ interface _observer {
   * @example
   * observer.remove("myState")
   *
-  * @since dphelper 1.0.6
+  * @since memorio 1.0.6
   */
   readonly remove?: (name: string, callBack?: any, flag?: boolean) => void
 

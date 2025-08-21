@@ -1,6 +1,6 @@
 /*!
-  dphelper
-  Copyright (c) 2019 Dario Passariello <dariopassariello@gmail.com>
+  memorio
+  Copyright (c) 2025 Dario Passariello <dariopassariello@gmail.com>
   Licensed under MIT License, see
   https://dario.passariello.ca
 */
@@ -17,7 +17,7 @@ interface _state {
    * @example
    * state.myStuff = any
    *
-   * @since dphelper 0.0.1
+   * @since memorio 0.0.1
    * @param key The name of the state for which you want to modify the action.
    * @return The previous values (Any).
    * Important: Object is a Proxy.
@@ -30,7 +30,7 @@ interface _state {
    * @example
    * state.remove(stateName)
    *
-   * @since dphelper 0.0.1
+   * @since memorio 0.0.1
    * @param stateName The name of the state for which you want to delete.
    * @return boolean.
    */
@@ -42,7 +42,7 @@ interface _state {
    * @example
    * state.removeAll()
    *
-   * @since dphelper 1.8.92
+   * @since memorio 1.8.92
    * @return Remove all states.
    */
   readonly removeAll?: () => any
@@ -53,15 +53,15 @@ interface _state {
    * @example
    * state.list
    *
-   * @since dphelper 0.0.1
+   * @since memorio 0.0.1
    * @return Object of all states (Not the Proxy).
    */
   readonly list?: (stateName: string) => any
 
   /**
-  * Generate a message for "dphelper Manage"
+  * Generate a message for "memorio"
   * Note: FOR INTERNAL USE ONLY.
-  * @since dphelper 0.0.1
+  * @since memorio 0.0.1
   */
   readonly mex?: any
 
