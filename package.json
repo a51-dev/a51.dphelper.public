@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "1.9.14",
+  "version": "1.9.22",
   "description": "dphelper devtools, store and state management for developers by Dario Passariello",
   "copyright": "Dario Passariello",
   "license": "MIT",
@@ -167,22 +167,22 @@
     "./*": "./*"
   },
   "dependencies": {
-    "dphelper.types": "0.0.15",
-    "memorio": "0.2.14"
+    "dphelper.types": "0.0.19",
+    "memorio": "1.0.2"
   },
   "devDependencies": {
-    "@eslint/js": "9.33.0",
+    "@eslint/js": "9.34.0",
     "@types/node": "^24.3.0",
     "@types/webpack-env": "1.18.8",
-    "@typescript-eslint/eslint-plugin": "8.40.0",
-    "@typescript-eslint/parser": "8.40.0",
+    "@typescript-eslint/eslint-plugin": "8.41.0",
+    "@typescript-eslint/parser": "8.41.0",
     "copy-webpack-plugin": "^13.0.1",
     "crypto-js": "4.2.0",
-    "eslint": "9.33.0",
+    "eslint": "9.34.0",
     "file-loader": "6.2.0",
     "jquery": "3.7.1",
     "terser-webpack-plugin": "^5.3.14",
-    "ts-loader": "^9.5.2",
+    "ts-loader": "^9.5.4",
     "ts-node": "10.9.2",
     "tslib": "^2.8.1",
     "typescript": "5.9.2",

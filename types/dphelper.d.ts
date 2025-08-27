@@ -14,41 +14,173 @@
 */
 interface _dphelper {
   /**
-   * Set parameter in dphelper
-   * @param key Name of main function.
-   * @return The values.
+   * Dynamic index signature for additional properties
+   * @private
    */
-  // [key: string]: any
+  [key: string]: any
 
-  // _dphelper: any
-
-  [_list: string]: any
-
+  /**
+   * Anchor manipulation utilities
+   */
   anchor: {
-    toOnClick(el: string): void
+    /**
+     * Converts anchor tags to onClick events
+     * @param selector - CSS selector for target elements
+     */
+    toOnClick(selector: string): void
   }
 
+  /**
+   * Array manipulation utilities
+   */
   array: {
-    find(array: any[], key: any): any
-    unique(array: any[]): any[]
-    delete(array: any[], key: any): void
-    merge(arrayA: any[], arrayB: any[]): any[]
-    mergeByKey(arrayA: any[], arrayB: any[], key: string): any[]
-    asc(array: any[]): any[]
-    desc(array: any[]): any[]
-    duplicates(array: any[]): any[]
-    even(array: any[]): any[]
-    odd(array: any[]): any[]
-    toObj(array: any[]): object
-    sumColumn(array: any[], column: number): number
-    shuffle(array: any[]): any[]
-    generate(num: number): any[]
-    testArrayInt(array: any[]): number[]
-    rand32(number: number): any
-    findindex(array: any[], key: any): number
-    pathToJson(array: any[], separator?: string): object
-    deepClone(src: any): any
-    match(arrayWords: any[], arrayToCheck: any[]): boolean
+    /**
+     * Finds an element in an array by key
+     * @param array - Input array to search
+     * @param key - Key to search for
+     * @returns Found element or undefined
+     */
+    find<T>(array: T[], key: any): T | any
+
+    /**
+     * Returns array with unique values
+     * @param array - Input array
+     * @returns New array with unique values
+     */
+    unique<T>(array: T[]): T[]
+
+    /**
+     * Deletes an element from array by key
+     * @param array - Input array
+     * @param key - Key to delete
+     */
+    delete<T>(array: T[], key: keyof T): void
+
+    /**
+     * Merges two arrays
+     * @param arrayA - First array
+     * @param arrayB - Second array
+     * @returns Merged array
+     */
+    merge<T>(arrayA: T[], arrayB: T[]): T[]
+
+    /**
+     * Merges two arrays based on a key
+     * @param arrayA - First array
+     * @param arrayB - Second array
+     * @param key - Key to merge on
+     * @returns Merged array
+     */
+    mergeByKey<T extends Record<string, any>>(arrayA: T[], arrayB: T[], key: keyof T): T[]
+
+    /**
+     * Sorts array in ascending order
+     * @param array - Input array
+     * @returns Sorted array
+     */
+    asc<T>(array: T[]): T[]
+
+    /**
+     * Sorts array in descending order
+     * @param array - Input array
+     * @returns Sorted array
+     */
+    desc<T>(array: T[]): T[]
+
+    /**
+     * Finds duplicate values in array
+     * @param array - Input array
+     * @returns Array of duplicate values
+     */
+    duplicates<T>(array: T[]): T[]
+
+    /**
+     * Returns even elements from array
+     * @param array - Input array
+     * @returns Array with even elements
+     */
+    even<T>(array: T[]): T[]
+
+    /**
+     * Returns odd elements from array
+     * @param array - Input array
+     * @returns Array with odd elements
+     */
+    odd<T>(array: T[]): T[]
+
+    /**
+     * Converts array to object
+     * @param array - Input array
+     * @returns Resulting object
+     */
+    toObj<T>(array: T[]): Record<string, T>
+
+    /**
+     * Sums values in a specific column of 2D array
+     * @param array - Input 2D array
+     * @param column - Column index to sum
+     * @returns Sum of values
+     */
+    sumColumn(array: number[][], column: number): number
+
+    /**
+     * Shuffles array elements randomly
+     * @param array - Input array
+     * @returns Shuffled array
+     */
+    shuffle<T>(array: T[]): T[]
+
+    /**
+     * Generates array with sequential numbers
+     * @param num - Length of array to generate
+     * @returns Generated array
+     */
+    generate(num: number): number[]
+
+    /**
+     * Tests if array contains only integers
+     * @param array - Input array
+     * @returns Array of valid integers
+     */
+    testArrayInt(array: unknown[]): number[]
+
+    /**
+     * Generates random 32-bit number
+     * @param number - Upper bound
+     * @returns Random number
+     */
+    rand32(number: number): number
+
+    /**
+     * Finds index of element by key
+     * @param array - Input array
+     * @param key - Key to search for
+     * @returns Found index or -1
+     */
+    findindex<T>(array: T[], key: any): number
+
+    /**
+     * Converts path array to JSON object
+     * @param array - Input array
+     * @param separator - Path separator
+     * @returns Resulting object
+     */
+    pathToJson(array: string[], separator?: string): Record<string, unknown>
+
+    /**
+     * Deep clones an object or array
+     * @param src - Source to clone
+     * @returns Cloned copy
+     */
+    deepClone<T>(src: T): T
+
+    /**
+     * Checks if arrays have matching elements
+     * @param arrayWords - Array of words to match
+     * @param arrayToCheck - Array to check against
+     * @returns Whether arrays match
+     */
+    match(arrayWords: string[], arrayToCheck: string[]): boolean
   }
 
   audio: {

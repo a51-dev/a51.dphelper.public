@@ -1,23 +1,21 @@
+/*!
+  memorio
+  Copyright (c) 2025 Dario Passariello <dariopassariello@gmail.com>
+  Licensed under MIT License, see
+  https://dario.passariello.ca
+*/
 
-declare module 'memorio' {
-  const resource: { [key: string]: any }
-  export = resource
-}
+////////////////////
+// Global object
+////////////////////
 
-interface _memorio {
-  setProps: any,
-  obj: any,
-  array: any,
-  dispatch: any,
-  setDescription: any
-}
+/**
+* @return memorio Root.
+*/
+interface _memorio {}
 
+////////////////////////////////////////////////////////////////////////////
+
+declare var memorio: _memorio
 type memorio = _memorio
-declare var memorio: any
 
-type arguments = any
-declare var arguments: any
-
-global.memorio = global.memorio
-  ? global.memorio
-  : globalThis.memorio
