@@ -1,24 +1,20 @@
 {
   "name": "dphelper",
-  "version": "1.9.22",
+  "version": "1.9.23",
   "description": "dphelper devtools, store and state management for developers by Dario Passariello",
   "copyright": "Dario Passariello",
   "license": "MIT",
-  "folder": "/",
   "main": "./index.js",
-  "typeID": 0,
-  "theme": "default",
   "deprecated": false,
-  "target": "web",
-  "targets": "web",
   "preferGlobal": true,
+  "target": "web",
   "language": {
     "en": {}
   },
   "app": {
     "displayName": "dphelper",
     "port": 3000,
-    "code": "vulcano",
+    "code": "vulkan",
     "releaseType": "gold",
     "codeRelease": "dphelper",
     "name": "dphelper",
@@ -168,7 +164,7 @@
   },
   "dependencies": {
     "dphelper.types": "0.0.19",
-    "memorio": "1.0.2"
+    "memorio": "1.1.1"
   },
   "devDependencies": {
     "@eslint/js": "9.34.0",
