@@ -4,6 +4,8 @@
 
 This document provides a comprehensive list of all available state functions in the `dphelper` library along with their descriptions and examples.
 
+**Based on [Memorio](https://www.npmjs.com/package/memorio) by Dario Passariello** to manage STATE, STORE, SESSION and OBSERVER. You can use Memorio is you need only state management. DpHelper is indicate when you use a complete suite of tools.
+
 ## Functions
 
 ### state.[state.name] ex: _state.test_

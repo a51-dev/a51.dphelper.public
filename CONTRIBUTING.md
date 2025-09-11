@@ -46,8 +46,8 @@ We will then take care of the issue as soon as possible.
 
 ## I Want To Contribute
 
-> #### Legal Notice
->
+### Legal Notice
+
 > When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project licence.
 
 ### Reporting Bugs
@@ -107,4 +107,4 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/a51-de
 
 ## Join The Project Team
 
-Please send email to dariopassariello@gmail.com
+Please send email to <dariopassariello@gmail.com>

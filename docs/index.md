@@ -6,17 +6,34 @@
 
 [![version](https://img.shields.io/npm/v/dphelper.svg)](https://npmjs.org/package/dphelper)
 [![downloads](https://img.shields.io/npm/dm/dphelper.svg)](https://npmjs.org/package/dphelper)
-![TypeScript](https://img.shields.io/badge/TypeScript-006b98?logo=TypeScript&logoColor=white)
 
-![dphelper](https://img.shields.io/badge/dphelper-npm-green?logo=dphelper&logoColor=white)
-![browser extension](https://img.shields.io/badge/browser%20extension-beta-orange.svg)
+![jQuery](https://img.shields.io/badge/jQuery-gray?logo=jQuery)
+![Javascript](https://img.shields.io/badge/Javascript-gray?logo=Javascript)
+![React](https://img.shields.io/badge/React-gray?logo=React)
+![TypeScript](https://img.shields.io/badge/TypeScript-gray?logo=typescript)
+
+![Node.js](https://img.shields.io/badge/Node.js-gray?logo=node.js)
+![Jest](https://img.shields.io/badge/Jest-gray?logo=jest)
+![ESLint](https://img.shields.io/badge/ESLint-gray?logo=eslint)
+![webpack](https://img.shields.io/badge/webpack-gray?logo=webpack)
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
 
-<!--
-[![dphelper](https://snyk.io/advisor/npm-package/dphelper/badge.svg)](https://snyk.io/advisor/npm-package/dphelper)
-[![Socket Badge](https://socket.dev/api/badge/npm/package/dphelper)](https://socket.dev/npm/package/dphelper)
--->
+## Table of Contents
+
+1. [About](#about)
+2. [Live Demo](#live-demo)
+3. [Installation](#install)
+4. [Documentation](#documentation)
+   1. [State](#state)
+   2. [Store](#store)
+   3. [Session](#session)
+   4. [Observer](#observer)
+5. [Extension](#extension)
+6. [Security](#security)
+7. [License](#license)
 
 ## About
 
@@ -27,6 +44,8 @@ dpHelper is a precise and complete collection of 190+ tools ready to use in all 
 2. **State is flexible**: State changes are facilitated exclusively through actions. These actions, which are straightforward JavaScript objects, delineate what has occurred. This methodology ensures that state changes remain predictable.
 
 3. **Changes are made with proxy handle function**: To define state changes, dpHelper employs pure functions as intermediaries. These functions accept the current state as input and produce a new state as output, ensuring predictability and ease of testing in the system.
+
+4. **Based on [Memorio](https://www.npmjs.com/package/memorio) by Dario Passariello** to manage STATE, STORE, SESSION and OBSERVER. You can use Memorio is you need only state management. DpHelper is indicate when you use a complete suite of tools.
 
 ### 1. Example in React
 
@@ -75,7 +94,7 @@ You can see:
 
 You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://a51.gitbook.io/dphelper).
 
-## Usage
+## Install
 
 Install dpHelper.
 
@@ -109,7 +128,7 @@ Note: You don't need to use npm install in this case, or you will get an error.
 <script src="https://cdn.jsdelivr.net/npm/dphelper"></script>
 ```
 
-## The Best Way To Use State
+## State
 
 ### Using the "state" Function
 
@@ -144,7 +163,7 @@ state.removeAll()
 
 ```
 
-### Observer for States
+### Observer
 
 **Note**: _Observer works only with states. Stores are excluded at the moment._
 
@@ -181,6 +200,8 @@ observer(
 setInterval(() => state.count = Date.now(), 5000);
 ```
 
+> NOTE: In some cases you need to wrap inside and useEffect in React to avoid multiple observers
+
 #### Another Simple Example
 
 ```js
@@ -201,7 +222,7 @@ observer('myData', () => {
 state.myData = 'New value';
 ```
 
-## The Best Way To Use Store 🫙
+## Store
 
 ### Persistent Storage with dpHelper
 
@@ -267,7 +288,26 @@ function App() {
 export default App;
 ```
 
-## Console It
+## session
+
+Similar to store but it's removed when you close the browser.
+For more performance it's better to use state over session. State is global and access to data is more faster and not require the time to resolve promises.
+
+```js
+// Set a store:
+store.set("test", { test: "test" })
+
+// Get a store:
+store.get("test") // Output: { test: "test" }
+
+// Remove a store:
+store.remove("test") // Output: "ok"
+
+// Remove all stores:
+store.removeAll() // Output: "ok"
+```
+
+## Extension
 
 Type **dphelper** in the devtool console of your browser to have a look at all available tools that you can use! You can call these from everywhere without import (just one time in the main/root page).
 
@@ -295,7 +335,7 @@ The dpHelper browser extension allows you to manage your application's dpHelper 
 4. Easy installation: Simply import 'dphelper' in your project index to get started.
 5. Global accessibility: All scripts are available globally and can be accessed from anywhere in your application.
 
-## Check
+## Security
 
 [Socket.dev](https://socket.dev/npm/package/dphelper)
 
@@ -312,4 +352,4 @@ The dpHelper browser extension allows you to manage your application's dpHelper 
 
 ---
 
-Dario Passariello - <dariopassariello@gmail.com>, All rights reserved - Copyright (c) 2019 - 2024
+Dario Passariello - <dariopassariello@gmail.com>, All rights reserved - Copyright (c) 2019 - 2025

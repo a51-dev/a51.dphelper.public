@@ -7,6 +7,7 @@
 * [State](/documents/STATE.md)
 * [Observer](/documents/OBSERVER.md)
 * [Store](/documents/STORE.md)
+* [Session](/documents/SESSION.md)
 * [All Functions](/documents/TOOLS.md)
 
 ## documents
