@@ -1,4 +1,4 @@
-# dpHelper
+# [dphelper](https://npmjs.com/package/dphelper)
 
 ![dpHelper](https://raw.githubusercontent.com/passariello/container/refs/heads/main/dphelper/assets/images/banner.svg)
 
@@ -17,15 +17,19 @@
 ![ESLint](https://img.shields.io/badge/ESLint-gray?logo=eslint)
 ![webpack](https://img.shields.io/badge/webpack-gray?logo=webpack)
 
+[![Socket Badge](https://badge.socket.dev/npm/package/dphelper/1.9.50)](https://badge.socket.dev/npm/package/dphelper/latest)
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
 
+[![NPM](https://nodei.co/npm/dphelper.png?stars=true&downloads=true)](https://www.npmjs.com/package/dphelper?activeTab=readme)
+
 ## Table of Contents
 
 1. [About](#about)
-2. [Live Demo](#live-demo)
-3. [Installation](#install)
+2. [Installation](#install)
+3. [Live Demo](#live-demo)
 4. [Documentation](#documentation)
    1. [State](#state)
    2. [Store](#store)
@@ -72,28 +76,6 @@ import 'dphelper';
 export default App;
 ```
 
-## Live Demo
-
-[https://tests.a51.dev/](https://tests.a51.dev/)
-
-You can see an HTML version where dpHelper and LayerPro work together seamlessly. dpHelper is compatible with a variety of frontend libraries, including:
-
-* HTML
-* React
-* Vue
-* And any other frontend library
-
-## Documentation
-
-You can see:
-
-* [State](https://a51.gitbook.io/dphelper/general/state)
-* [Store](https://a51.gitbook.io/dphelper/general/store)
-* [Observer](https://a51.gitbook.io/dphelper/general/observer)
-* [List of functions](https://a51.gitbook.io/dphelper/general/tools)
-
-You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://a51.gitbook.io/dphelper).
-
 ## Install
 
 Install dpHelper.
@@ -127,6 +109,28 @@ Note: You don't need to use npm install in this case, or you will get an error.
 ```html
 <script src="https://cdn.jsdelivr.net/npm/dphelper"></script>
 ```
+
+## Live Demo
+
+[https://tests.a51.dev/](https://tests.a51.dev/)
+
+You can see an HTML version where dpHelper and LayerPro work together seamlessly. dpHelper is compatible with a variety of frontend libraries, including:
+
+* HTML
+* React
+* Vue
+* And any other frontend library
+
+## Documentation
+
+You can see:
+
+* [State](https://a51.gitbook.io/dphelper/general/state)
+* [Store](https://a51.gitbook.io/dphelper/general/store)
+* [Observer](https://a51.gitbook.io/dphelper/general/observer)
+* [List of functions](https://a51.gitbook.io/dphelper/general/tools)
+
+You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://a51.gitbook.io/dphelper).
 
 ## State
 
