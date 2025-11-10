@@ -17,8 +17,6 @@
 ![ESLint](https://img.shields.io/badge/ESLint-gray?logo=eslint)
 ![webpack](https://img.shields.io/badge/webpack-gray?logo=webpack)
 
-[![Socket Badge](https://badge.socket.dev/npm/package/dphelper/1.9.50)](https://badge.socket.dev/npm/package/dphelper/latest)
-
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
@@ -35,6 +33,7 @@
    2. [Store](#store)
    3. [Session](#session)
    4. [Observer](#observer)
+   5. [useObserver](#useobserver)
 5. [Extension](#extension)
 6. [Security](#security)
 7. [License](#license)
@@ -128,6 +127,7 @@ You can see:
 * [State](https://a51.gitbook.io/dphelper/general/state)
 * [Store](https://a51.gitbook.io/dphelper/general/store)
 * [Observer](https://a51.gitbook.io/dphelper/general/observer)
+* [useObserver](https://a51.gitbook.io/dphelper/general/useobserver)
 * [List of functions](https://a51.gitbook.io/dphelper/general/tools)
 
 You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://a51.gitbook.io/dphelper).
@@ -224,6 +224,21 @@ observer('myData', () => {
 
 // Change the state
 state.myData = 'New value';
+```
+
+## useObserver
+
+```js
+import 'dphelper';
+
+// Use the useObserver to log the changing state value
+useObserver(
+  () => console.log("State changed: ", state.count)
+  , 'state.count'
+);
+
+// Store a value in the state that changes every 5 seconds
+setInterval(() => state.count = Date.now(), 5000);
 ```
 
 ## Store
