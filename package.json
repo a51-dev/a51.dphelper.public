@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "1.9.73",
+  "version": "1.9.75",
   "description": "dphelper devtools, data management for developers by Dario Passariello",
   "homepage": "https://a51.gitbook.io/dphelper",
   "copyright": "Dario Passariello",
@@ -158,7 +158,7 @@
   },
   "dependencies": {
     "dphelper.types": "0.0.20",
-    "memorio": "1.2.3"
+    "memorio": "1.2.6"
   },
   "devDependencies": {
     "@eslint/js": "9.39.1",
