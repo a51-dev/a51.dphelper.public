@@ -14,14 +14,15 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-gray?logo=node.js)
 ![Jest](https://img.shields.io/badge/Jest-gray?logo=jest)
-![ESLint](https://img.shields.io/badge/ESLint-gray?logo=eslint)
+![ESLint](https://img.shields.io/badge/Eslint-gray?logo=eslint)
 ![webpack](https://img.shields.io/badge/webpack-gray?logo=webpack)
+
+![Snik](https://img.shields.io/badge/Snyk-gray?logo=Snyk)
+![Snik](https://img.shields.io/badge/Socket-gray?logo=socket)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
-
-[![NPM](https://nodei.co/npm/dphelper.png?stars=true&downloads=true)](https://www.npmjs.com/package/dphelper?activeTab=readme)
 
 ## Table of Contents
 
@@ -106,7 +107,7 @@ require("dphelper");
 Note: You don't need to use npm install in this case, or you will get an error.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dphelper"></script>
+<script src="https://cdn.jsdelivr.net/npm/dphelper@latest/+esm"></script>
 ```
 
 ## Live Demo

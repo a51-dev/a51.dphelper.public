@@ -199,10 +199,10 @@ dphelper.check.version(v1, v2, opts)
 // Compares two version strings.
 ```
 
-```js
+<!-- ```js
 dphelper.check.npmVer(npm)
 // Gets the version of an npm package.
-```
+``` -->
 
 ### Color
 
@@ -1164,23 +1164,25 @@ dphelper.timer.percentage(start, end)
 
 ### Tools
 
+<!--
+\\ REMOVED
 ```js
-dphelper.dev.getip()
+dphelper.tools.getip()
 // Gets the IP address.
-```
+``` -->
 
 ```js
-dphelper.dev.byteSize(bytes)
+dphelper.tools.byteSize(bytes)
 // Converts bytes to a human-readable format.
 ```
 
 ```js
-dphelper.dev.zIndex()
+dphelper.tools.zIndex()
 // Gets the z-index.
 ```
 
 ```js
-dphelper.dev.zeroToFalse(value)
+dphelper.tools.zeroToFalse(value)
 // Converts zero to false.
 ```
 
