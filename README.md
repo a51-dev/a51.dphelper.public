@@ -361,14 +361,14 @@ The dpHelper browser extension allows you to manage your application's dpHelper 
 
 [Snyk.io](https://security.snyk.io/package/npm/dphelper)
 
-## License
+<!-- ## License
 
 [MIT - https://en.wikipedia.org/wiki/MIT_License](https://en.wikipedia.org/wiki/MIT_License)
 
 * [LICENSE](https://a51.gitbook.io/dphelper/documents/license)
 * [CODE OF CONDUCT](https://a51.gitbook.io/dphelper/documents/code_of_conduct)
 * [SECURITY](https://a51.gitbook.io/dphelper/documents/security)
-* [CONTRIBUTING](https://a51.gitbook.io/dphelper/documents/contributing)
+* [CONTRIBUTING](https://a51.gitbook.io/dphelper/documents/contributing) -->
 
 ---
 
