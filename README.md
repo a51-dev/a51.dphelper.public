@@ -49,9 +49,9 @@ dpHelper is a precise and complete collection of 190+ tools ready to use in all 
 
 3. **Changes are made with proxy handle function**: To define state changes, dpHelper employs pure functions as intermediaries. These functions accept the current state as input and produce a new state as output, ensuring predictability and ease of testing in the system.
 
-4. **Based on [Memorio](https://www.npmjs.com/package/memorio) by Dario Passariello** to manage STATE, STORE, SESSION and OBSERVER. You can use Memorio is you need only state management. DpHelper is indicate when you use a complete suite of tools.
+<!-- 4. **Based on [Memorio](https://www.npmjs.com/package/memorio) by Dario Passariello** to manage STATE, STORE, SESSION and OBSERVER. You can use Memorio is you need only state management. DpHelper is indicate when you use a complete suite of tools. -->
 
-### 1. Example in React
+### Example in React
 
 ```js
 import { useEffect } from 'react';
@@ -107,7 +107,7 @@ require("dphelper");
 Note: You don't need to use npm install in this case, or you will get an error.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dphelper@latest/+esm"></script>
+<script src="https://cdn.jsdelivr.net/npm/dphelper@latest"></script>
 ```
 
 ## Live Demo
@@ -135,7 +135,7 @@ You can see more tutorials, information, and examples about **dpHelper** [clicki
 
 ## State
 
-### Using the "state" Function
+### Using the "state"
 
 You can use the state function to store and reuse data throughout your application. Similar to other state managers, you can save state information in JSON format and access it easily in various contexts, including React useEffect and/or dispatch.
 
@@ -327,7 +327,7 @@ store.remove("test") // Output: "ok"
 store.removeAll() // Output: "ok"
 ```
 
-## Extension
+## Console (devtools)
 
 Type **dphelper** in the devtool console of your browser to have a look at all available tools that you can use! You can call these from everywhere without import (just one time in the main/root page).
 
