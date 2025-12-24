@@ -1,6 +1,6 @@
 {
   "name": "dphelper",
-  "version": "2.2.2",
+  "version": "2.2.4",
   "description": "dphelper devtools, data management for developers by Dario Passariello",
   "homepage": "https://a51.gitbook.io/dphelper",
   "copyright": "Dario Passariello",
@@ -155,7 +155,7 @@
     "./*": "./*"
   },
   "dependencies": {
-    "memorio": "1.5.1"
+    "memorio": "1.6.0"
   },
   "devDependencies": {
     "dphelper.types": "0.0.20",
