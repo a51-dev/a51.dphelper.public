@@ -2,374 +2,227 @@
 
 ![dpHelper](https://raw.githubusercontent.com/passariello/container/refs/heads/main/dphelper/assets/images/banner.svg)
 
-**Manager | DevTools** by [Dario Passariello](https://dario.passariello.ca) (c)
+**The supercharged toolkit for modern web development, AI engineering & DevTools.**
 
 [![version](https://img.shields.io/npm/v/dphelper.svg)](https://npmjs.org/package/dphelper)
 [![downloads](https://img.shields.io/npm/dm/dphelper.svg)](https://npmjs.org/package/dphelper)
-
-![jQuery](https://img.shields.io/badge/jQuery-gray?logo=jQuery)
 ![Javascript](https://img.shields.io/badge/Javascript-gray?logo=Javascript)
-![React](https://img.shields.io/badge/React-gray?logo=React)
 ![TypeScript](https://img.shields.io/badge/TypeScript-gray?logo=typescript)
+![AI Ready](https://img.shields.io/badge/AI-Ready-brightgreen?logo=openai)
+![TOON](https://img.shields.io/badge/TOON-Format-blue)
 
 ![Node.js](https://img.shields.io/badge/Node.js-gray?logo=node.js)
 ![Jest](https://img.shields.io/badge/Jest-gray?logo=jest)
 ![ESLint](https://img.shields.io/badge/Eslint-gray?logo=eslint)
-![webpack](https://img.shields.io/badge/webpack-gray?logo=webpack)
-
-![Snik](https://img.shields.io/badge/Snyk-gray?logo=Snyk)
-![Snik](https://img.shields.io/badge/Socket-gray?logo=socket)
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![esbuild](https://img.shields.io/badge/esbuild-gray?logo=esbuild)
+![Snyk](https://img.shields.io/badge/Snyk-gray?logo=Snyk)
 
 [![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
+
+---
+
+## About
+
+**dphelper** is a powerful, zero-dependency utility library that brings together 45+ production-ready tools for web developers, AI engineers, and DevTools creators.
+
+Think of it as your **universal toolbox** - from DOM manipulation to cryptographic operations, from real-time WebSocket handling to AI-powered token optimization. No more juggling multiple packages. One import, infinite possibilities.
+
+### Why dphelper?
+
+- **⚡ Zero Dependencies** - Pure vanilla JavaScript/TypeScript. No bloat, no surprises.
+- **🤖 AI-First Design** - Built for LLM apps with TOON optimization, token counting, and RAG support.
+- **🌐 Universal** - Works in browser, Node.js, Bun, and Deno.
+- **🔒 Type-Safe** - Full TypeScript definitions auto-generated for every tool.
+- **📦 Tiny Bundle** - Only ~136KB minified, tree-shakeable.
+
+> *"dphelper is what you'd build if you combined lodash, socket.io, and an AI SDK - but lighter."*
+
+---
+
+> [!IMPORTANT]
+> Application state is currently handled through Memorio and RGS.
+
+## To integrate state management into your project
+
+- Simple State and Store Manager [Memorio](http://www.npmjs.com/package/memorio)
+- Enterprise Lever State Manager [Argis RGS](https://www.npmjs.com/package/@biglogic/rgs)
+
+---
+
+## 🚀 Version 3.0: The AI Leap
+
+`dphelper` has evolved into a powerhouse for AI-driven applications. We've removed legacy dependencies (bye-bye jQuery!) and shifted focus to **performance**, **modularity**, and **LLM optimization**.
+
+### ✨ Highlights
+
+- **🤖 Advanced AI Module**: Built-in support for RAG, token counting, and prompt engineering.
+- **🚀 AI Black Box (Snapshot)**: The first "Flight Recorder" for apps, capturing the internal state in TOON for instant AI debugging.
+- **🎒 TOON Integration**: Native support for **Token-Oriented Object Notation** (3.0), reducing LLM context usage by up to 50%.
+- **🛠️ Zero Dependencies**: Pure vanilla JavaScript/TypeScript architecture.
+- **🌐 Fetch & SSE Pro**: High-level networking with automatic retries and custom headers.
+- **⚡ Bulletproof Dispatcher**: Integrated listener management with automatic cleanup.
+- **🔄 UI Mirror & Pulse**: Cross-tab synchronization and automatic UI state recovery (Zero-Code Persistence).
+- **🌊 SSE Pro**: Server-Sent Events with POST & Custom Header support (modern AI streaming ready).
+- **🧬 Modular Types**: Auto-generated Type definitions for all 200+ tools.
+
+---
 
 ## Table of Contents
 
 1. [About](#about)
-2. [Installation](#install)
-3. [Live Demo](#live-demo)
-4. [Documentation](#documentation)
-   1. [State](#state)
-   2. [Store](#store)
-   3. [Session](#session)
-   4. [Observer](#observer)
-   5. [useObserver](#useobserver)
-5. [Extension](#extension)
-6. [Security](#security)
-7. [License](#license)
+2. [Installation](#installation)
+3. [AI Power User Guide](#ai-power-user-guide)
+4. [Modular Architecture](#modular-architecture)
+5. [Browser Extension (Chrome/Edge)](#browser-extension-chromeedge)
+6. [Environment Compatibility](#environment-compatibility)
+7. [Security](#security)
 
-## About
+---
 
-dpHelper is a precise and complete collection of 190+ tools ready to use in all web/SaaS applications. State and Store Management are now easy, accessible everywhere in your application, including Ajax or React apps, without the need for extra files.
-
-1. **Single Source of Truth**: The application's entire state is held within a single object in one store, ensuring consistent and accessible state management throughout the app.
-
-2. **State is flexible**: State changes are facilitated exclusively through actions. These actions, which are straightforward JavaScript objects, delineate what has occurred. This methodology ensures that state changes remain predictable.
-
-3. **Changes are made with proxy handle function**: To define state changes, dpHelper employs pure functions as intermediaries. These functions accept the current state as input and produce a new state as output, ensuring predictability and ease of testing in the system.
-
-<!-- 4. **Based on [Memorio](https://www.npmjs.com/package/memorio) by Dario Passariello** to manage STATE, STORE, SESSION and OBSERVER. You can use Memorio is you need only state management. DpHelper is indicate when you use a complete suite of tools. -->
-
-### Example in React
-
-```js
-import { useEffect } from 'react';
-import 'dphelper';
-
-  function App() {
-    // Store a value in the state
-    state.test = 'Hello, World!';
-
-    // Use the stored value in a React component
-    useEffect(() => {
-      console.log("You can recall from all pages: " + state.test); // Output: "Hello, World!"
-    }, []);
-
-    return (
-      <div>
-        <h1>{state.test}</h1>
-      </div>
-    );
-  }
-
-export default App;
-```
-
-## Install
-
-Install dpHelper.
+## Installation
 
 ```shell
 npm i dphelper --save-dev
 ```
 
-or update:
+### Usage
 
-```shell
-npm i dphelper@latest --save-dev
-```
-
-Use it in the main root file (and only there):
+Import it precisely **once** in your entry point (e.g., `index.js`, `main.ts`, or `App.tsx`):
 
 ```js
 import "dphelper";
+// dphelper is now available globally across your entire project!
 ```
 
-or
-
-```js
-require("dphelper");
-```
-
-## Install for EJS or Other Types of Projects (like HTML)
-
-Note: You don't need to use npm install in this case, or you will get an error.
+For plain HTML/CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dphelper@latest"></script>
+<script src="https://unpkg.com/dphelper/dphelper.umd.js"></script>
+
+<!-- Optional check -->
+<script>
+  console.debug(dphelper.version);  // latest version
+  console.debud(dphelper.isBrowser); // true
+</script>
 ```
-
-## Live Demo
-
-[https://tests.a51.dev/](https://tests.a51.dev/)
-
-You can see an HTML version where dpHelper and LayerPro work together seamlessly. dpHelper is compatible with a variety of frontend libraries, including:
-
-* HTML
-* React
-* Vue
-* And any other frontend library
-
-## Documentation
-
-You can see:
-
-* [State](https://a51.gitbook.io/dphelper/general/state)
-* [Store](https://a51.gitbook.io/dphelper/general/store)
-* [Observer](https://a51.gitbook.io/dphelper/general/observer)
-* [useObserver](https://a51.gitbook.io/dphelper/general/useobserver)
-* [List of functions](https://a51.gitbook.io/dphelper/general/tools)
-
-You can see more tutorials, information, and examples about **dpHelper** [clicking here](https://a51.gitbook.io/dphelper).
-
-## State
-
-### Using the "state"
-
-You can use the state function to store and reuse data throughout your application. Similar to other state managers, you can save state information in JSON format and access it easily in various contexts, including React useEffect and/or dispatch.
-
-For example, you can store a value like this: _state.test = 'I am ready'_ and then retrieve it later using state.test.
-
-_example:_
-
-You can use the browser's devtools console and type " **state.test = 'I am ready'** ". Every time you want to use '**test**' values, you need just recall **state.test**.
-
-```js
-// Set a state
-state.test = "I am ready" *
-
-// Get the state
-state.test *
-
-// List all states
-state.list // or just "state" to see the proxy
-
-// Lock a state from edit (Only for Objects or Array)
-state.test.lock() *
-
-// Remove a state
-state.remove("test")
-
-// Remove all states
-state.removeAll()
-
-*["test" is only an example]
-
-```
-
-### Observer
-
-**Note**: _Observer works only with states. Stores are excluded at the moment._
-
-If you want to run a function every time a state changes, you can use:
-
-```js
-/**
-* Observer is a non-cumulative listener,
-* triggered from customEvent / dispatch from state
-* @parameters
-* [ state | store, function ]
-*/
-observer( "state.test", () => alert("Test Changes to: " + state.test) )
-          |__________|  |___________________________________________|
-          State: string                   Function
-
-PS: you need to use the name of state | store as string
-```
-
-You can use it everywhere. Works like "useState" in React but with more flexibility (use one observer for each state!).
-
-### Example
-
-```js
-import 'dphelper';
-
-// Use the observer to log the changing state value
-observer(
-  'state.count',
-  () => console.log("State changed: ", state.count)
-);
-
-// Store a value in the state that changes every 5 seconds
-setInterval(() => state.count = Date.now(), 5000);
-```
-
-> NOTE: In some cases you need to wrap inside and useEffect in React to avoid multiple observers
-
-#### Another Simple Example
-
-```js
-import 'dphelper';
-
-// Set a state
-state.myData = 'Hello, world!';
-
-// Retrieve the state
-console.log(state.myData); // Output: Hello, world!
-
-// Observe state changes
-observer('myData', () => {
-  console.log('myData has changed to:', state.myData);
-});
-
-// Change the state
-state.myData = 'New value';
-```
-
-## useObserver
-
-```js
-import 'dphelper';
-
-// Use the useObserver to log the changing state value
-useObserver(
-  () => console.log("State changed: ", state.count)
-  , 'state.count'
-);
-
-// Store a value in the state that changes every 5 seconds
-setInterval(() => state.count = Date.now(), 5000);
-```
-
-## Store
-
-### Persistent Storage with dpHelper
-
-When using dpHelper for permanent storage, you should use the **store**, which stores data persistently across sessions.
-
-#### Important Security Note
-
-1. **Use store for persistent storage:** If you want to store data permanently, use store to ensure it is saved in localStorage.
-
-2. **Remove data when necessary:** To maintain security, remove stored data when it is no longer needed, such as during logout.
-
-3. **Remove all stored data:** Use store.removeAll() to securely remove all stored data from your application.
-
-```js
-// Set a store:
-store.set("test", { test: "test" })
-
-// Get a store:
-store.get("test") // Output: { test: "test" }
-
-// Remove a store:
-store.remove("test") // Output: "ok"
-
-// Remove all stores:
-store.removeAll() // Output: "ok"
-```
-
-### 2. Example in React
-
-```js
-import { useEffect } from 'react';
-import 'dphelper';
-
-function App() {
-
-  // Store a value in the store (persistent storage)
-  store.set(
-    'user',
-    {
-      name: 'John Doe',
-      age: 30
-    }
-  );
-
-  // Use the stored value in a React component
-  useEffect(
-    () => {
-      console.log(store.get("user")); // Output: { name: "John Doe", age: 30 }
-      $("#name").text(store.get("user").name)
-    }, []
-  );
-
-  // Remove all stored data if necessary
-  // store.removeAll();
-
-  return (
-    <div>
-      <h1 id="name">...</h1>
-    </div>
-  );
-}
-
-export default App;
-```
-
-## session
-
-Similar to store but it's removed when you close the browser.
-For more performance it's better to use state over session. State is global and access to data is more faster and not require the time to resolve promises.
-
-```js
-// Set a store:
-store.set("test", { test: "test" })
-
-// Get a store:
-store.get("test") // Output: { test: "test" }
-
-// Remove a store:
-store.remove("test") // Output: "ok"
-
-// Remove all stores:
-store.removeAll() // Output: "ok"
-```
-
-## Console (devtools)
-
-Type **dphelper** in the devtool console of your browser to have a look at all available tools that you can use! You can call these from everywhere without import (just one time in the main/root page).
-
-## Browser Extension (Chrome/Edge) ♥️
-
-![browser extension](https://img.shields.io/badge/browser%20extension-beta-orange.svg)
-
-![dphelper Banner](https://raw.githubusercontent.com/passariello/container/refs/heads/main/dphelper/assets/images/banner.png)
-
-![dphelper Banner](https://raw.githubusercontent.com/passariello/container/refs/heads/main/dphelper/assets/images/screenshot.png)
-
-Chrome: [Download from Google Web Store](https://chrome.google.com/webstore/detail/dphelper-manager-dev-tool/oppppldaoknfddeikfloonnialijngbk)
-
-Edge: [Download from Microsoft Addons](https://microsoftedge.microsoft.com/addons/detail/dphelper-manager-dev-to/kphabkbdpaljlfagldhojilhfammepnk)
-
-PS: **dpHelper** is compatible with all Chromium-based browsers like **Edge or Brave**!
-
-## dpHelper Browser Extension
-
-The dpHelper browser extension allows you to manage your application's dpHelper NPM. Key features include:
-
-1. Simplified API operations: Easily manage and manipulate data with dpHelper's collection of scripts.
-2. Real-time monitoring: Track memory usage and localStorage to optimize your application's performance.
-3. Stay up-to-date: Receive updates and tips to improve your daily workflow.
-4. Easy installation: Simply import 'dphelper' in your project index to get started.
-5. Global accessibility: All scripts are available globally and can be accessed from anywhere in your application.
-
-## Security
-
-[Socket.dev](https://socket.dev/npm/package/dphelper)
-
-[Snyk.io](https://security.snyk.io/package/npm/dphelper)
-
-<!-- ## License
-
-[MIT - https://en.wikipedia.org/wiki/MIT_License](https://en.wikipedia.org/wiki/MIT_License)
-
-* [LICENSE](https://a51.gitbook.io/dphelper/documents/license)
-* [CODE OF CONDUCT](https://a51.gitbook.io/dphelper/documents/code_of_conduct)
-* [SECURITY](https://a51.gitbook.io/dphelper/documents/security)
-* [CONTRIBUTING](https://a51.gitbook.io/dphelper/documents/contributing) -->
 
 ---
 
-Dario Passariello - <dariopassariello@gmail.com>, All rights reserved - Copyright (c) 2019 - 2025
+## AI Power User Guide
+
+The new `dphelper.ai` module is designed for the modern AI stack (LLMs, RAG, Vector Search).
+
+```javascript
+// ⚡ TOON: The ultimate JSON alternative for prompts
+const toonData = dphelper.ai.toon(myJsonObject);
+// Efficient, compact, and deterministic.
+
+// 📏 Context-Aware Token Counting
+const tokens = dphelper.ai.tokenCount(myJsonObject);
+// Automatically calculates tokens based on the optimal TOON representation.
+
+// 🧩 Smart Chunker (RAG Ready)
+const chunks = dphelper.ai.chunker(longText, { size: 1000, overlap: 200 });
+
+// 🔍 Semantic Similarity
+const score = dphelper.ai.similarity(embeddingA, embeddingB);
+
+// 🧠 Reasoning Extractor (DeepSeek/O1 support)
+const { reasoning, content } = dphelper.ai.extractReasoning(rawAiReply);
+
+// 📸 The AI Black Box (Snapshot)
+const appStateToon = dphelper.ai.snapshot();
+// Generates a complete app "mental dump" (URL, gState, Logs) optimized for LLMs.
+```
+
+---
+
+## Modular Architecture
+
+Every tool in `dphelper` is now a self-contained module. Our new build system automatically:
+
+1. Scans the `tools/` directory.
+2. Generates dynamic imports for the core.
+3. Synchronizes TypeScript interfaces in `types/dphelper.d.ts`.
+
+This ensures that adding new tools is instantaneous and always documented with full Intellisense support.
+
+---
+
+## 🔄 UI Mirror & Auto-Recovery
+
+`dphelper` makes your web app feel like a native desktop application with cross-tab intelligence.
+
+```javascript
+// ⚓ Auto-Recovery: Save scroll and input values across reloads/crashes
+dphelper.UI.anchorContext();
+
+// 💓 Pulse: Real-time event bus between all open tabs (No Backend needed!)
+const bus = dphelper.sync.pulse('my-app', (msg) => {
+  console.debug('Received from another tab:', msg);
+});
+bus.emit({ action: 'theme-change', value: 'dark' });
+
+// 🔒 Interlock: Monitor how many tabs of your app are active
+dphelper.browser.interlock((count) => {
+  console.debug(`Active tabs: ${count}`);
+});
+
+// 🌊 SSE: Modern streaming (Support for POST & Headers)
+const stream = dphelper.sse.open('/api/ai', {
+  method: 'POST',
+  headers: { 'Authorization': 'Bearer ...' },
+  body: JSON.stringify({ prompt: 'Hello AI' })
+});
+
+stream.on('message', (data) => console.debug('Chunk:', data));
+stream.on('error', (err) => console.error('Stream failure:', err));
+```
+
+---
+
+## Browser Extension (Chrome/Edge)
+
+![dphelper Banner](https://raw.githubusercontent.com/passariello/container/refs/heads/main/dphelper/assets/images/screenshot.png)
+
+Manage your `dphelper` environment, monitor memory usage, and access documentation directly from your browser.
+
+- [Download for Chrome](https://chrome.google.com/webstore/detail/dphelper-manager-dev-tool/oppppldaoknfddeikfloonnialijngbk)
+- [Download for Edge](https://microsoftedge.microsoft.com/addons/detail/dphelper-manager-dev-to/kphabkbdpaljlfagldhojilhfammepnk)
+
+---
+
+---
+
+## Environment Compatibility
+
+`dphelper` tools are classified by their execution target to ensure stability across the stack.
+
+| Icon | Type | Description |
+| :--- | :--- | :--- |
+| 🌐 | **Client** | Browser only (requires DOM, window, or navigator). |
+| 🖥️ | **Server** | Node.js / Bun / Deno only (access to process, fs, etc). |
+| 🧬 | **Isomorphic** | Universal. Works in both Browser and Server (AI, Logic, Math). |
+
+### Core Module Status
+
+- `dphelper.ai`: 🧬 Isomorphic
+- `dphelper.fetch`: 🧬 Isomorphic (Supports Node 18+)
+- `dphelper.sse`: 🌐 Client (Streaming fetch)
+- `dphelper.socket`: 🌐 Client (WebSocket)
+- `dphelper.sync`: 🌐 Client (BroadcastChannel)
+- `dphelper.UI`: 🌐 Client (DOM based)
+
+---
+
+## Security
+
+We take security seriously. Every release is audited:
+
+- [Socket.dev Audit](https://socket.dev/npm/package/dphelper)
+- [Snyk Security Report](https://security.snyk.io/package/npm/dphelper)
+
+---
+
+Dario Passariello - <dariopassariello@gmail.com>
+All rights reserved - Copyright (c) 2019 - 2026
