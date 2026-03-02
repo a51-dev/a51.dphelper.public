@@ -22,4 +22,4 @@ The Sync module provides tools to keep application state consistent across diffe
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

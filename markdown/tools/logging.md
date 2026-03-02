@@ -24,4 +24,4 @@ Tool for managing application logging with different severity levels.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

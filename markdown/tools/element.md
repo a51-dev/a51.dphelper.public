@@ -22,4 +22,4 @@ Tool for responsive scaling of DOM elements based on window size.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

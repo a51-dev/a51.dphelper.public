@@ -21,4 +21,4 @@ Tool for sanitizing HTML strings and escaping special characters to prevent XSS 
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

@@ -25,4 +25,4 @@ Tool for string and text manipulation.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

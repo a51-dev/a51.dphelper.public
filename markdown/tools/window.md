@@ -27,4 +27,4 @@ Tool for advanced browser window management: popups, zoom control, memory purgin
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

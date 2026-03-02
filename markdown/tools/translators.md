@@ -21,4 +21,4 @@ Tool for converting CSS transformation matrices into scale values.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

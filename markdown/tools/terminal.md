@@ -25,4 +25,4 @@ Creates an interactive terminal within a specified DOM element. It redirects `co
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

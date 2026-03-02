@@ -40,4 +40,4 @@ await dphelper.navigation.load('/products');
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

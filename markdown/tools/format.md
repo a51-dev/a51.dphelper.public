@@ -22,4 +22,4 @@ Tool for formatting currencies and phone numbers.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

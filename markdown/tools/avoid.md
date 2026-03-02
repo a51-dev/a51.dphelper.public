@@ -25,4 +25,4 @@ Appends a unique query parameter to a given URI to prevent the browser from usin
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

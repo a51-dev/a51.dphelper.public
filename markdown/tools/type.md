@@ -24,4 +24,4 @@ Tool for checking JavaScript data types.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

@@ -23,4 +23,4 @@ Tool for programmatically triggering DOM events.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

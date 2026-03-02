@@ -21,4 +21,4 @@ Tool for managing application-wide keyboard shortcuts.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

@@ -27,4 +27,4 @@ Plays an audio file if it is not already playing. If called without arguments, i
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

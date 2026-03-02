@@ -26,4 +26,4 @@ Tool for customizing and managing scrollbars: custom styles, indicators, positio
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

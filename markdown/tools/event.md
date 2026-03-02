@@ -24,4 +24,4 @@ Tool for advanced event management: event listing, multiple listeners, and drag-
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

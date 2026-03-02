@@ -33,4 +33,4 @@ Tool for advanced array manipulation. Native functions (such as `unique` via Set
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

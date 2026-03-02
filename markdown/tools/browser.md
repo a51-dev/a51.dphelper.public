@@ -42,4 +42,4 @@ dphelper.browser.href("https://google.com");
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

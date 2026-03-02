@@ -43,4 +43,4 @@ console.log(params.id); // '123'
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

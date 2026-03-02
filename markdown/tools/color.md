@@ -25,4 +25,4 @@ Tool for conversion between different color formats. Hexadecimal conversion logi
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

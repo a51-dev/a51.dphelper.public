@@ -31,4 +31,4 @@ Tool for advanced JavaScript object manipulation. Basic functions like `Object.e
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

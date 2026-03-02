@@ -22,4 +22,4 @@ Tool for locking and unlocking memory states.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

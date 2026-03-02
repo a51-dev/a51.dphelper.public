@@ -21,4 +21,4 @@ The Net module focuses on communication resilience, handling transient network e
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

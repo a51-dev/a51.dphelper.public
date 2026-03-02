@@ -41,4 +41,4 @@ console.log(humanDate); // '23 February 2026' (depends on locale)
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

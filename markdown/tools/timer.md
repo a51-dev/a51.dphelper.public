@@ -22,4 +22,4 @@ Tool for managing timers and asynchronous pauses.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

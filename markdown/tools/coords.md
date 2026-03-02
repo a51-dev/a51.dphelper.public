@@ -25,4 +25,4 @@ Specialized tool for trigonometric and geographic calculations. Mapping formulas
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

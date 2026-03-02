@@ -25,4 +25,4 @@ Tool for disabling browser features on specific elements: text selection, copy, 
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

@@ -22,4 +22,4 @@ The AI module provides lightweight helpers to interact with LLMs, including priv
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

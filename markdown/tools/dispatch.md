@@ -23,4 +23,4 @@ Tool for managing custom events: dispatch, listen, and remove.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

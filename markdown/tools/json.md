@@ -25,4 +25,4 @@ Tool for JSON manipulation: safe parsing, normalization of dirty data (via `sani
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

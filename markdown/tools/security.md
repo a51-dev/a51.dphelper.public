@@ -29,4 +29,4 @@ The security module provides advanced tools for data protection, identity genera
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

@@ -26,4 +26,4 @@ Tool for simplified WebSocket management. Note: socket tracking has been made sa
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

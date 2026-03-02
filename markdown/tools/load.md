@@ -23,4 +23,4 @@ Tool for asynchronous loading of files and resources: scripts, files, and HTML c
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

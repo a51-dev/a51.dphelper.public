@@ -25,4 +25,4 @@ Tool with optimized mathematical functions and utilities. Note: basic operations
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

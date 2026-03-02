@@ -26,4 +26,4 @@ Advanced tool for managing graphical connections between elements. The current v
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

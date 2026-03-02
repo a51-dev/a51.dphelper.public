@@ -29,4 +29,4 @@ const fruits = dphelper.system.multiSplit(str, [',', ':', ';']);
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

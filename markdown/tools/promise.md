@@ -21,4 +21,4 @@ Tool for controlling JavaScript Promises. The `resolve` function has been remove
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*

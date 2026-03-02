@@ -22,4 +22,4 @@ Tool for managing the browser's fullscreen mode.
 
 ---
 
-*Automatically generated document - dphelper v3.0.6*
+*Automatically generated document*
