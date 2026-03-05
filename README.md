@@ -5,19 +5,27 @@
 **The supercharged toolkit for modern web development, AI engineering & DevTools.**
 
 [![version](https://img.shields.io/npm/v/dphelper.svg)](https://npmjs.org/package/dphelper)
+[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=dphelper&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=dphelper)
 [![downloads](https://img.shields.io/npm/dm/dphelper.svg)](https://npmjs.org/package/dphelper)
+
+![Snyk](https://img.shields.io/badge/Snyk-gray?logo=Snyk)
+[![Known Vulnerabilities](https://snyk.io/test/npm/dphelper/badge.svg)](https://snyk.io/test/npm/dphelper)
+[![Socket Badge](https://socket.dev/api/badge/npm/package/dphelper)](https://socket.dev/npm/package/dphelper)
+
+![Node.js](https://img.shields.io/badge/Node.js-gray?logo=node.js)
+![React](https://img.shields.io/badge/React-gray?logo=React)
 ![Javascript](https://img.shields.io/badge/Javascript-gray?logo=Javascript)
 ![TypeScript](https://img.shields.io/badge/TypeScript-gray?logo=typescript)
+![esbuild](https://img.shields.io/badge/esbuild-gray?logo=esbuild)
+
+![Jest](https://img.shields.io/badge/Jest-gray?logo=jest)
+![ESLint](https://img.shields.io/badge/Eslint-gray?logo=eslint)
+![Playwright](https://img.shields.io/badge/Playwright-gray?logo=playwright)
 ![AI Ready](https://img.shields.io/badge/AI-Ready-brightgreen?logo=openai)
 ![TOON](https://img.shields.io/badge/TOON-Format-blue)
 
-![Node.js](https://img.shields.io/badge/Node.js-gray?logo=node.js)
-![Jest](https://img.shields.io/badge/Jest-gray?logo=jest)
-![ESLint](https://img.shields.io/badge/Eslint-gray?logo=eslint)
-![esbuild](https://img.shields.io/badge/esbuild-gray?logo=esbuild)
-![Snyk](https://img.shields.io/badge/Snyk-gray?logo=Snyk)
-
 [![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
+
 
 ---
 
@@ -97,7 +105,7 @@ import "dphelper";
 For plain HTML/CDN:
 
 ```html
-<script src="https://unpkg.com/dphelper/dphelper.umd.js"></script>
+<script src="https://unpkg.com/dphelper/dphelper.js"></script>
 
 <!-- Optional check -->
 <script>
@@ -143,7 +151,7 @@ Every tool in `dphelper` is now a self-contained module. Our new build system au
 
 1. Scans the `tools/` directory.
 2. Generates dynamic imports for the core.
-3. Synchronizes TypeScript interfaces in `types/dphelper.d.ts`.
+3. Synchronizes TypeScript interfaces in `dphelper.d.ts`.
 
 This ensures that adding new tools is instantaneous and always documented with full Intellisense support.
 
@@ -226,3 +234,7 @@ We take security seriously. Every release is audited:
 
 Dario Passariello - <dariopassariello@gmail.com>
 All rights reserved - Copyright (c) 2019 - 2026
+
+## License
+
+MIT
