@@ -2,7 +2,7 @@
 
 ![dpHelper](https://raw.githubusercontent.com/passariello/container/refs/heads/main/dphelper/assets/images/banner.svg)
 
-**The supercharged toolkit for modern web development, AI engineering & DevTools.**
+> **The supercharged toolkit for modern web development, AI engineering & DevTools.**
 
 [![version](https://img.shields.io/npm/v/dphelper.svg)](https://npmjs.org/package/dphelper)
 [![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=dphelper&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=dphelper)
@@ -31,7 +31,7 @@
 
 ## About
 
-**dphelper** is a powerful, zero-dependency utility library that brings together 45+ production-ready tools for web developers, AI engineers, and DevTools creators.
+**dphelper** is a powerful, zero-dependency utility library that brings together **53 production-ready tools** for web developers, AI engineers, and DevTools creators.
 
 Think of it as your **universal toolbox** - from DOM manipulation to cryptographic operations, from real-time WebSocket handling to AI-powered token optimization. No more juggling multiple packages. One import, infinite possibilities.
 
@@ -41,7 +41,7 @@ Think of it as your **universal toolbox** - from DOM manipulation to cryptograph
 - **🤖 AI-First Design** - Built for LLM apps with TOON optimization, token counting, and RAG support.
 - **🌐 Universal** - Works in browser, Node.js, Bun, and Deno.
 - **🔒 Type-Safe** - Full TypeScript definitions auto-generated for every tool.
-- **📦 Tiny Bundle** - Only ~136KB minified, tree-shakeable.
+- **📦 Tiny Bundle** - Only ~171KB minified, tree-shakeable.
 
 > *"dphelper is what you'd build if you combined lodash, socket.io, and an AI SDK - but lighter."*
 
@@ -57,21 +57,158 @@ Think of it as your **universal toolbox** - from DOM manipulation to cryptograph
 
 ---
 
-## 🚀 Version 3.0: The AI Leap
+## 🚀 Version 3.3: New Powerful Modules
 
-`dphelper` has evolved into a powerhouse for AI-driven applications. We've removed legacy dependencies (bye-bye jQuery!) and shifted focus to **performance**, **modularity**, and **LLM optimization**.
+`dphelper` has expanded with powerful new modules for modern web development:
 
 ### ✨ Highlights
 
-- **🤖 Advanced AI Module**: Built-in support for RAG, token counting, and prompt engineering.
-- **🚀 AI Black Box (Snapshot)**: The first "Flight Recorder" for apps, capturing the internal state in TOON for instant AI debugging.
-- **🎒 TOON Integration**: Native support for **Token-Oriented Object Notation** (3.0), reducing LLM context usage by up to 50%.
-- **🛠️ Zero Dependencies**: Pure vanilla JavaScript/TypeScript architecture.
-- **🌐 Fetch & SSE Pro**: High-level networking with automatic retries and custom headers.
-- **⚡ Bulletproof Dispatcher**: Integrated listener management with automatic cleanup.
-- **🔄 UI Mirror & Pulse**: Cross-tab synchronization and automatic UI state recovery (Zero-Code Persistence).
-- **🌊 SSE Pro**: Server-Sent Events with POST & Custom Header support (modern AI streaming ready).
-- **🧬 Modular Types**: Auto-generated Type definitions for all 200+ tools.
+- **💾 IndexedDB Module**: Full-featured wrapper for IndexedDB with query builder, transactions, and bulk operations.
+- **⚙️ Web Worker Module**: Create and manage workers, worker pools for parallel processing, and SharedWorkers for cross-tab communication.
+- **🌍 i18n Module**: Complete internationalization with translations, pluralization, date/number formatting, and relative time.
+- **🖼️ Image Module**: Image processing including resize, crop, filters, rotation, flip, and compositing.
+- **🗜️ Compression Module**: Gzip, deflate, LZW compression, plus base64, URL, and HTML encoding/decoding.
+- **🔐 Biometric Module**: WebAuthn support for fingerprint, face recognition, and secure credential management.
+
+---
+
+## 💾 IndexedDB Module
+
+```javascript
+// Open/create database
+const db = await dphelper.idb.open('mydb', 1, { users: 'id++,name,email' });
+
+// Add record
+await dphelper.idb.put('mydb', 'users', { name: 'John', email: 'john@example.com' });
+
+// Query records
+const users = await dphelper.idb.getAll('mydb', 'users');
+
+// Query by index
+const johns = await dphelper.idb.query('mydb', 'users', 'name', 'John');
+
+// Bulk operations
+await dphelper.idb.bulkPut('mydb', 'users', [{name: 'A'}, {name: 'B'}]);
+```
+
+---
+
+## ⚙️ Web Worker Module
+
+```javascript
+// Create worker from file
+const worker = dphelper.worker.create('worker.js', {
+  onmessage: (e) => console.log(e.data)
+});
+
+// Create inline worker
+const inlineWorker = dphelper.worker.createInline(`
+  self.onmessage = e => postMessage(e.data * 2);
+`);
+
+// Worker pool for parallel processing
+const pool = dphelper.worker.pool('worker.js', 4);
+const results = await dphelper.worker.poolExec(pool, [1, 2, 3, 4]);
+
+// SharedWorker for cross-tab communication
+const shared = dphelper.worker.shared('worker.js', { name: 'my-shared' });
+```
+
+---
+
+## 🌍 i18n Module
+
+```javascript
+// Set locale
+dphelper.i18n.setLocale('it');
+
+// Add translations
+dphelper.i18n.addTranslations('it', {
+  hello: 'Ciao {name}!',
+  items: '{count, plural, one{# item} other{# items}}'
+});
+
+// Translate with interpolation
+dphelper.i18n.t('hello', { name: 'World' }); // "Ciao World!"
+
+// Pluralize
+dphelper.i18n.pluralize(5, { one: 'item', other: 'items' }); // "items"
+
+// Format number/currency
+dphelper.i18n.number(1234.56, 'de-DE', { style: 'currency', currency: 'EUR' });
+
+// Relative time
+dphelper.i18n.relativeTime(Date.now() - 3600000); // "1 hour ago"
+```
+
+---
+
+## 🖼️ Image Module
+
+```javascript
+// Load image
+const img = await dphelper.image.load('photo.jpg');
+
+// Resize
+const resized = dphelper.image.resize(img, 100, 100);
+
+// Crop
+const cropped = dphelper.image.crop(img, { x: 0, y: 0, width: 50, height: 50 });
+
+// Apply filters
+const filtered = dphelper.image.filter(img, { brightness: 1.2, sepia: 0.5 });
+
+// Rotate/Flip
+const rotated = dphelper.image.rotate(img, 90);
+const flipped = dphelper.image.flip(img, 'horizontal');
+
+// Grayscale/Blur
+const gray = dphelper.image.grayscale(img);
+const blurred = dphelper.image.blur(img, 5);
+```
+
+---
+
+## 🗜️ Compression Module
+
+```javascript
+// Gzip compression
+const compressed = await dphelper.compress.gzip('Hello World');
+const decompressed = await dphelper.compress.gunzip(compressed);
+
+// Base64 encoding
+const encoded = dphelper.compress.base64Encode('Hello');
+const decoded = dphelper.compress.base64Decode(encoded);
+
+// URL encoding
+const urlEncoded = dphelper.compress.urlEncode('Hello World!');
+const urlDecoded = dphelper.compress.urlDecode(urlEncoded);
+
+// HTML encoding
+const htmlEncoded = dphelper.compress.htmlEncode('<script>');
+const htmlDecoded = dphelper.compress.htmlDecode('&lt;script&gt;');
+```
+
+---
+
+## 🔐 Biometric Module (WebAuthn)
+
+```javascript
+// Check availability
+const available = dphelper.biometric.isAvailable();
+
+// Get support details
+const support = dphelper.biometric.getWebAuthnSupport();
+
+// Register credential
+const { success, credentialId } = await dphelper.biometric.register('user123');
+
+// Authenticate
+const { success } = await dphelper.biometric.authenticate('user123');
+
+// Check specific sensor
+const hasFingerprint = await dphelper.biometric.isSensorAvailable('fingerprint');
+```
 
 ---
 
@@ -223,18 +360,10 @@ Manage your `dphelper` environment, monitor memory usage, and access documentati
 
 ---
 
-## Security
-
-We take security seriously. Every release is audited:
-
-- [Socket.dev Audit](https://socket.dev/npm/package/dphelper)
-- [Snyk Security Report](https://security.snyk.io/package/npm/dphelper)
-
----
-
-Dario Passariello - <dariopassariello@gmail.com>
-All rights reserved - Copyright (c) 2019 - 2026
-
 ## License
 
-MIT
+MIT License
+
+## Credits
+
+Copyrigth (c) [Dario Passariello](https://dario.passariello.ca/)

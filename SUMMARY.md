@@ -57,7 +57,9 @@
 ## Network & Storage
 
 - [cookie](markdown/cookie.md)
+- [compress](markdown/compress.md)
 - [fetch](markdown/fetch.md)
+- [idb](markdown/idb.md)
 - [net](markdown/net.md)
 - [sse](markdown/sse.md)
 - [sync](markdown/sync.md)
@@ -67,7 +69,10 @@
 ## Advanced
 
 - [avoid](markdown/avoid.md)
+- [biometric](markdown/biometric.md)
 - [credits](markdown/credits.md)
+- [i18n](markdown/i18n.md)
+- [image](markdown/image.md)
 - [logging](markdown/logging.md)
 - [memory](markdown/memory.md)
 - [promise](markdown/promise.md)
@@ -76,3 +81,4 @@
 - [terminal](markdown/terminal.md)
 - [timer](markdown/timer.md)
 - [triggers](markdown/triggers.md)
+- [worker](markdown/worker.md)
