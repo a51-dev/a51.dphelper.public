@@ -102,12 +102,17 @@ const updater = new RealtimeUpdater('/api/updates', {
 updater.connect();
 ```
 
+## Security Notes
+
+> [!IMPORTANT]
+> **Input Validation Required:** SSE connections require URL validation by the caller. Use `dphelper.sanitize.url()` before opening connections.
+
 ## Details
 
 - **Author:** Dario Passariello
-- **Version:** 0.0.1
+- **Version:** 0.0.2
 - **Creation Date:** 20260221
-- **Last Modified:** 20260221
+- **Last Modified:** 20260329
 - **Environment:** Client-side only (browser)
 
 ---

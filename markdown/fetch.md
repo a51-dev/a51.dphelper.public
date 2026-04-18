@@ -85,12 +85,36 @@ const api = new ApiClient('https://api.example.com');
 const data = await api.get('/items');
 ```
 
+## Security Notes
+
+> [!IMPORTANT]
+> Network functions (`fetch`, `SSE`, `socket`) require **input validation** by the caller.
+
+This library provides networking primitives **by design**:
+- HTTP/HTTPS requests
+- Server-Sent Events
+- WebSocket connections
+
+As a devtools library, these features are essential for modern web development. **Callers are responsible for validating URLs and data** before passing them to these functions.
+
+### Best Practices
+
+```javascript
+// ALWAYS validate and sanitize user input
+const sanitizedUrl = dphelper.sanitize.url(userInput);
+const validatedData = dphelper.sanitize.html(userData);
+
+await dphelper.fetch.get(sanitizedUrl);
+```
+
+---
+
 ## Details
 
 - **Author:** Dario Passariello
-- **Version:** 0.0.1
+- **Version:** 0.0.2
 - **Creation Date:** 20260221
-- **Last Modified:** 20260221
+- **Last Modified:** 20260329
 - **Environment:** both (browser + Node.js)
 
 ---

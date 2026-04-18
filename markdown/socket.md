@@ -118,12 +118,15 @@ document.querySelector('form').addEventListener('submit', (e) => {
 - **URL Validation** - Prevents arbitrary origin connections
 - **Same-origin fallback** - Supports relative URLs
 
+> [!IMPORTANT]
+> **Input Validation Required:** Callers must validate and sanitize URLs before passing them to socket functions. Use `dphelper.sanitize.url()` for URL validation.
+
 ## Details
 
 - **Author:** Dario Passariello
 - **Version:** 0.0.2
 - **Creation Date:** 20210101
-- **Last Modified:** 20260220
+- **Last Modified:** 20260329
 - **Environment:** Client-side only (browser)
 
 ---

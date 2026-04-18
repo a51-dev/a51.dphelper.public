@@ -188,13 +188,13 @@ console.log(tampered); // null (detected tampering!)
 ## Security Features
 
 ### AES-256-GCM Encryption
-- Uses PBKDF2 with 100,000 iterations for key derivation
+- Uses PBKDF2 with **310,000 iterations** (OWASP 2023 compliant) for key derivation
 - Random 16-byte salt for each encryption
 - Random 12-byte IV (Initialization Vector)
 - Authenticated encryption (confidentiality + integrity)
 
 ### Secure Password Hashing
-- SHA-256 algorithm
+- **SHA-256 only** (CNSA compliant, SHA-1 deprecated)
 - Random 16-byte salt per hash
 - Salt + hash stored together for verification
 - Time-safe comparison
@@ -204,6 +204,20 @@ console.log(tampered); // null (detected tampering!)
 - HMAC-SHA256 for integrity verification
 - Tamper detection on retrieval
 - Version support for future updates
+
+### Network Functions Security
+
+> [!IMPORTANT]
+> Network primitives (`fetch`, `sse`, `socket`) are **by design** for modern web development. Callers must:
+> - Validate and sanitize all URLs before passing to these functions
+> - Use `dphelper.sanitize.url()` for URL validation
+> - Never pass untrusted user input directly to network functions
+
+```javascript
+// Correct usage
+const safeUrl = dphelper.sanitize.url(userInput);
+await dphelper.fetch.get(safeUrl);
+```
 
 ## Advanced Usage
 
