@@ -1,0 +1,88 @@
+{
+  "name": "dphelper",
+  "code": "dphelper",
+  "version": "3.7.2",
+  "description": "dphelper devtools for developers",
+  "main": "./index.cjs",
+  "browser": "./index.cjs",
+  "types": "./index.d.ts",
+  "typing": "./types/*",
+  "homepage": "https://a51.gitbook.io/dphelper",
+  "license": "MIT",
+  "copyright": "Dario Passariello",
+  "author": "Dario Passariello",
+  "contributors": [
+    {
+      "name": "Dario Passariello",
+      "email": "dariopassarielloa@gmail.com"
+    },
+    {
+      "name": "Valeria Cala Scaglitta",
+      "email": "valeriacalascaglitta@gmail.com"
+    }
+  ],
+  "keywords": [
+    "developer",
+    "devtools",
+    "ai",
+    "dphelper",
+    "front-end",
+    "back-end",
+    "framework",
+    "helper",
+    "utils",
+    "tools",
+    "uuid",
+    "random",
+    "window",
+    "easy",
+    "pro",
+    "powerful",
+    "status",
+    "dp helper",
+    "local",
+    "devtool"
+  ],
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/passariello"
+    }
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a51-dev/a51.dphelper.public.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a51-dev/a51.dphelper.public/issues"
+  },
+  "support": {
+    "name": "Dario Passariello",
+    "url": "https://dario.passariello.ca/",
+    "email": "dariopassariello@gmail.com"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
+  },
+  "module": "./index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    },
+    "./types/*": "./types/*"
+  },
+  "typings": "./index.d.ts"
+}

@@ -59,7 +59,6 @@
 - [cookie](markdown/cookie.md)
 - [compress](markdown/compress.md)
 - [fetch](markdown/fetch.md)
-- [idb](markdown/idb.md)
 - [net](markdown/net.md)
 - [sse](markdown/sse.md)
 - [sync](markdown/sync.md)
