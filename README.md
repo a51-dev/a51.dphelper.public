@@ -20,9 +20,6 @@
 ![AI Ready](https://img.shields.io/badge/AI-Ready-brightgreen?logo=openai)
 ![TOON](https://img.shields.io/badge/TOON-Format-blue)
 
-[![GitBook](https://img.shields.io/static/v1?message=Documented%20on%20GitBook&logo=gitbook&logoColor=ffffff&label=%20&labelColor=5c5c5c&color=3F89A1)](https://a51.gitbook.io/dphelper)
-
-
 ---
 
 ## About
@@ -54,10 +51,51 @@ Think of it as your **universal toolbox** - from DOM manipulation to cryptograph
 >
 > Application state is currently handled through **Memorio** or **RGS**.
 
-If you need to use state management please consider:
+If you need to use state/store management please consider:
 
-- Simple State and Store Manager [Memorio](http://www.npmjs.com/package/memorio)
-- Enterprise Lever State Manager [Argis RGS](https://www.npmjs.com/package/@biglogic/rgs)
+- [Memorio](http://www.npmjs.com/package/memorio) - Simple State and Store Manager
+- [Argis RGS](https://www.npmjs.com/package/@biglogic/rgs) - Enterprise Lever State Manager
+
+---
+
+## Table of Contents
+
+1. [About](#about)
+2. [Installation](#installation)
+3. [AI Power User Guide](#ai-power-user-guide)
+4. [Modular Architecture](#modular-architecture)
+5. [Browser Extension (Chrome/Edge)](#browser-extension-chromeedge)
+6. [Environment Compatibility](#environment-compatibility)
+7. [Security](#security)
+
+---
+
+## Installation
+
+```shell
+npm i dphelper --save-dev
+```
+
+### Usage
+
+Import it precisely **once** in your entry point (e.g., `index.js`, `main.ts`, or `App.tsx`):
+
+```js
+import "dphelper";
+// dphelper is now available globally across your entire project!
+```
+
+For plain HTML/CDN:
+
+```html
+<script src="https://unpkg.com/dphelper/dphelper.js"></script>
+
+<!-- Optional check -->
+<script>
+  console.debug(dphelper.version);  // latest version
+  console.debud(dphelper.isBrowser); // true
+</script>
+```
 
 ---
 
@@ -191,47 +229,6 @@ const { success } = await dphelper.biometric.authenticate('user123');
 
 // Check specific sensor
 const hasFingerprint = await dphelper.biometric.isSensorAvailable('fingerprint');
-```
-
----
-
-## Table of Contents
-
-1. [About](#about)
-2. [Installation](#installation)
-3. [AI Power User Guide](#ai-power-user-guide)
-4. [Modular Architecture](#modular-architecture)
-5. [Browser Extension (Chrome/Edge)](#browser-extension-chromeedge)
-6. [Environment Compatibility](#environment-compatibility)
-7. [Security](#security)
-
----
-
-## Installation
-
-```shell
-npm i dphelper --save-dev
-```
-
-### Usage
-
-Import it precisely **once** in your entry point (e.g., `index.js`, `main.ts`, or `App.tsx`):
-
-```js
-import "dphelper";
-// dphelper is now available globally across your entire project!
-```
-
-For plain HTML/CDN:
-
-```html
-<script src="https://unpkg.com/dphelper/dphelper.js"></script>
-
-<!-- Optional check -->
-<script>
-  console.debug(dphelper.version);  // latest version
-  console.debud(dphelper.isBrowser); // true
-</script>
 ```
 
 ---
@@ -375,6 +372,26 @@ await dphelper.fetch.get(userInput); // ❌ Unvalidated
 - Automated security scanning in CI
 
 ---
+
+### 🧬 The Core Architectural Ecosystem
+
+`dphelper` operates as a completely stateless, high-performance toolkit. To ensure clean separation of concerns and prevent race conditions or state contamination across asynchronous modules, state management has been extracted into dedicated standalone libraries.
+
+Always map your application architecture according to the following layout:
+
+| Layer & Purpose | Package | Operational Target | Design Philosophy |
+| :--- | :--- | :--- | :--- |
+| **Stateless Utilities & AI Tools** | `dphelper` | Isomorphic (Browser, Node.js, Bun, Deno) | **Zero-Dependency Universal Core.** Packs 303 production-ready modules including `ai` (TOON optimization, smart chunking), `worker` multi-threaded pools, `biometric` WebAuthn, `i18n`, desktop-grade cross-tab `sync.pulse`, and NIST-compliant cryptography. |
+| **Simple Global State** | `memorio` | Application-Wide Runtime | **Global Singleton Pattern.** High-performance, lightweight state management that eliminates boilerplate. It registers globally upon initial import and removes the need for custom context providers, actions, or dispatch files. |
+| **Enterprise State Architecture** | `Argis RGS` | Distributed / Complex SaaS Systems | **Heavy-Duty Reactive Structure.** Built for multi-module, enterprise-grade applications requiring strict state rules, relational data synchronization, and heavy concurrent data pipelines. |
+
+---
+
+### ⚠️ Integration Best Practices for AI & Humans
+
+1. **Do Not Bundle State Logic in dphelper:** Any legacy codebase referencing `dphelper.store` or namespace getters/setters must be migrated to `memorio` or `Argis RGS`.
+2. **Single-Entry Side Effect:** `dphelper` is designed to be imported exactly once in your root file (`import "dphelper";`). It will automatically map its 303 tools safely to the global scope.
+3. **State Integrity:** When building micro-frontends or multi-tab web applications, use `dphelper.sync` primitives to handle cross-tab events, while allowing `memorio` to manage the underlying atomic state memory.
 
 ## License
 

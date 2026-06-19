@@ -1,6 +1,6 @@
-# logging
+# log
 
-Advanced logging system.
+Advanced log system.
 
 ## Functions
 

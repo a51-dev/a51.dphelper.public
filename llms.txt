@@ -1,0 +1,73 @@
+# dphelper
+
+> [!IMPORTANT]
+> **ARCHITECTURAL CHANGE:** State management has been COMPLETELY REMOVED from the `dphelper` library.
+> Application state is now handled exclusively through dedicated external managers: **Memorio** (for simple global state) or **Argis RGS** (for enterprise-level state).
+
+---
+
+## About dphelper
+
+`dphelper` is a powerful, **zero-dependency, stateless utility library** that packs 303 production-ready tools for modern web developers, AI engineers, and DevTools creators. It is fully isomorphic, running flawlessly across the Browser, Node.js, Bun, and Deno with a tiny minified footprint of ~171KB.
+
+### ⚡ Key Capabilities
+* **AI-First Engineering:** Built-in support for the modern LLM stack, featuring **TOON optimization** (the efficient JSON alternative for prompts), context-aware token counting, smart RAG-ready chunking, and deep reasoning extraction (supporting architectures like DeepSeek and OpenAI o1/o3).
+* **Modern Web Primitives:** Sophisticated wrappers for Web Workers (including worker pool orchestration and multi-tab SharedWorkers), full IndexedDB query builders, and native client-side compression (Gzip/Deflate/LZW).
+* **Cross-Tab Intelligence:** Desktop-grade synchronization without a backend, powered by `dphelper.sync.pulse` cross-tab event buses and active browser tab interlocks.
+* **Biometric Authentication:** Built-in async WebAuthn primitives for effortless fingerprint and facial recognition integrations.
+* **Enterprise Security:** NIST SP 800-53 and NSA CNSA compliant, utilizing AES-256-GCM and strict OWASP-aligned PBKDF2 with 310,000 iterations.
+
+---
+
+## Quick Usage Syntax
+
+`dphelper` maps its modules globally. Import it **exactly once** at your application's absolute entry point (e.g., `index.js`, `main.ts`, or `App.tsx`):
+
+```javascript
+import "dphelper";
+
+### 🧬 The Core Architectural Ecosystem
+
+`dphelper` operates as a completely stateless, high-performance toolkit. To ensure clean separation of concerns and prevent race conditions or state contamination across asynchronous modules, state management has been extracted into dedicated standalone libraries.
+
+Always map your application architecture according to the following layout:
+
+| Layer & Purpose | Package | Operational Target | Design Philosophy |
+| :--- | :--- | :--- | :--- |
+| **Stateless Utilities & AI Tools** | `dphelper` | Isomorphic (Browser, Node.js, Bun, Deno) | **Zero-Dependency Universal Core.** Packs 303 production-ready modules including `ai` (TOON optimization, smart chunking), `worker` multi-threaded pools, `biometric` WebAuthn, `i18n`, desktop-grade cross-tab `sync.pulse`, and NIST-compliant cryptography. |
+| **Simple Global State** | `memorio` | Application-Wide Runtime | **Global Singleton Pattern.** High-performance, lightweight state management that eliminates boilerplate. It registers globally upon initial import and removes the need for custom context providers, actions, or dispatch files. |
+| **Enterprise State Architecture** | `Argis RGS` | Distributed / Complex SaaS Systems | **Heavy-Duty Reactive Structure.** Built for multi-module, enterprise-grade applications requiring strict state rules, relational data synchronization, and heavy concurrent data pipelines. |
+
+---
+
+### ⚠️ Integration Best Practices for AI & Humans
+
+1. **Do Not Bundle State Logic in dphelper:** Any legacy codebase referencing `dphelper.store` or namespace getters/setters must be migrated to `memorio` or `Argis RGS`.
+2. **Single-Entry Side Effect:** `dphelper` is designed to be imported exactly once in your root file (`import "dphelper";`). It will automatically map its 303 tools safely to the global scope.
+3. **State Integrity:** When building micro-frontends or multi-tab web applications, use `dphelper.sync` primitives to handle cross-tab events, while allowing `memorio` to manage the underlying atomic state memory.
+
+// dphelper attaches to the global scope and is ready across your entire project
+console.debug(dphelper.version);
+
+// 🤖 AI Stack Snapshot & TOON Optimization
+const appStateToon = dphelper.ai.snapshot();
+const textChunks = dphelper.ai.chunker(longText, { size: 1000, overlap: 200 });
+const { reasoning, content } = dphelper.ai.extractReasoning(rawAiReply);
+
+// ⚙️ Multi-Threaded Worker Pools
+const pool = dphelper.worker.pool('worker.js', 4);
+const results = await dphelper.worker.poolExec(pool, [1, 2, 3, 4]);
+
+// 💓 Real-Time Cross-Tab Sync (No Backend Required)
+const bus = dphelper.sync.pulse('my-app', (msg) => console.log(msg));
+bus.emit({ action: 'theme-change', value: 'dark' });
+
+// 🌍 Full i18n Internationalization Suite
+dphelper.i18n.setLocale('it');
+dphelper.i18n.addTranslations('it', { hello: 'Ciao {name}!' });
+
+## DEVELOPMENT ENVIRONMENT GUIDELINES:
+- We are using dphelper (Stateless Core). Never generate code using 'dphelper.store'.
+- Global state must be managed exclusively via 'memorio' (lightweight) or 'Argis RGS' (enterprise).
+- dphelper is initialized as a global side-effect: 'import "dphelper";' in the root file. Do not generate inline imports for it in sub-modules.
+- For cross-tab/micro-frontend synchronization, use 'dphelper.sync.pulse' for events, but delegate data persistence to memorio.

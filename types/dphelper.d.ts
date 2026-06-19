@@ -460,16 +460,17 @@
 // --- socket ---
   interface SocketTool {
     info: () => string
-    start: (element: any, server: any, name: string) => void
+    start: (server: any, name: string) => void
     conn: (id: any, server: any, name: string) => void
     connect: (server: any, name: string) => void
     open: (id: any, server: any, name: string) => void
-    send: (mex: any, type?: string) => void
     ping: (name: string) => void
-    receive: (el?: any, name?: string) => void
+    send: (mex: any, name: string) => void
+    receive: (func: Function, name: string) => void
     keepAlive: (name: string) => void
     check: () => void
     list: () => WebSocket[]
+    close: (name: string) => void
   }
 
 // --- sse ---
@@ -745,9 +746,6 @@ interface Window {
 interface globalThis {
   [key: string]: any
 }
-
-declare var DPH_APP_CODE: string
-declare var DPH_APP_VERSION: string
 
 declare function confirm(message: string, func1: Function, func2?: Function): boolean
 
