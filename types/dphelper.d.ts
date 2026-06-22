@@ -441,15 +441,15 @@
       v4: string
       v5: string
     }
-    hashPass: (u: string, p: string, t?: string) => Promise<string>
-    crypt: (u: string, p: string, mode?: string) => string
-    deCrypt: (u: string, p: string, mode?: string) => string
-    AES_KeyGen: (passKey?: string) => string
-    SHA256_Hex: (passKey: string) => string
+    hashPass: (u: string, p: string) => Promise<string>
+    crypt: (u: string, p: string) => Promise<string>
+    deCrypt: (u: string, p: string) => Promise<string>
+    AES_KeyGen: (passKey?: string) => Promise<string>
+    SHA256_Hex: (passKey: string) => Promise<string>
     ulid: () => string
-    fingerprint: () => string
-    saveEncrypted: (key: string, value: string, secret: string) => void
-    getEncrypted: (key: string, secret: string) => string | null
+    fingerprint: (options?: { requireConsent?: boolean; consent?: boolean }) => Promise<string>
+    saveEncrypted: (key: string, value: string, secret: string) => Promise<void>
+    getEncrypted: (key: string, secret: string) => Promise<string | null>
   }
 
 // --- shortcut ---
@@ -508,7 +508,7 @@
     /**
      * Create a Proxy object linked to localStorage for auto-sync with optional encryption.
      */
-    storageProxy: <T extends object>(key: string, initialValue: T, secret?: string) => T
+    storageProxy: <T extends object>(key: string, initialValue: T, secret?: string) => Promise<T>
     /**
      * Low-latency cross-tab event bus.
      */

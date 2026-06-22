@@ -14,11 +14,23 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-gray?logo=typescript)
 ![esbuild](https://img.shields.io/badge/esbuild-gray?logo=esbuild)
 
-![Jest](https://img.shields.io/badge/Jest-gray?logo=jest)
+![Vitest](https://img.shields.io/badge/Vitest-gray?logo=vitest)
 ![ESLint](https://img.shields.io/badge/Eslint-gray?logo=eslint)
 ![Playwright](https://img.shields.io/badge/Playwright-gray?logo=playwright)
 ![AI Ready](https://img.shields.io/badge/AI-Ready-brightgreen?logo=openai)
 ![TOON](https://img.shields.io/badge/TOON-Format-blue)
+
+---
+
+## Table of Contents
+
+1. [About](#about)
+2. [Installation](#installation)
+3. [AI Power User Guide](#ai-power-user-guide)
+4. [Modular Architecture](#modular-architecture)
+5. [Browser Extension (Chrome/Edge)](#browser-extension-chromeedge)
+6. [Environment Compatibility](#environment-compatibility)
+7. [Security](#security)
 
 ---
 
@@ -53,20 +65,8 @@ Think of it as your **universal toolbox** - from DOM manipulation to cryptograph
 
 If you need to use state/store management please consider:
 
-- [Memorio](http://www.npmjs.com/package/memorio) - Simple State and Store Manager
+- [Memorio](http://www.npmjs.com/package/memorio) - State and Store Manager
 - [Argis RGS](https://www.npmjs.com/package/@biglogic/rgs) - Enterprise Lever State Manager
-
----
-
-## Table of Contents
-
-1. [About](#about)
-2. [Installation](#installation)
-3. [AI Power User Guide](#ai-power-user-guide)
-4. [Modular Architecture](#modular-architecture)
-5. [Browser Extension (Chrome/Edge)](#browser-extension-chromeedge)
-6. [Environment Compatibility](#environment-compatibility)
-7. [Security](#security)
 
 ---
 
@@ -81,8 +81,9 @@ npm i dphelper --save-dev
 Import it precisely **once** in your entry point (e.g., `index.js`, `main.ts`, or `App.tsx`):
 
 ```js
+// IMPORT ONCE AT YOUR APP ENTRY POINT
+
 import "dphelper";
-// dphelper is now available globally across your entire project!
 ```
 
 For plain HTML/CDN:
@@ -96,21 +97,6 @@ For plain HTML/CDN:
   console.debud(dphelper.isBrowser); // true
 </script>
 ```
-
----
-
-## 🚀 New Powerful Modules
-
-`dphelper` has expanded with powerful new modules for modern web development:
-
-### ✨ Highlights
-
-- **💾 IndexedDB Module**: Full-featured wrapper for IndexedDB with query builder, transactions, and bulk operations.
-- **⚙️ Web Worker Module**: Create and manage workers, worker pools for parallel processing, and SharedWorkers for cross-tab communication.
-- **🌍 i18n Module**: Complete internationalization with translations, pluralization, date/number formatting, and relative time.
-- **🖼️ Image Module**: Image processing including resize, crop, filters, rotation, flip, and compositing.
-- **🗜️ Compression Module**: Gzip, deflate, LZW compression, plus base64, URL, and HTML encoding/decoding.
-- **🔐 Biometric Module**: WebAuthn support for fingerprint, face recognition, and secure credential management.
 
 ---
 
@@ -314,8 +300,6 @@ Manage your `dphelper` environment, monitor memory usage, and access documentati
 
 - [Download for Chrome](https://chrome.google.com/webstore/detail/dphelper-manager-dev-tool/oppppldaoknfddeikfloonnialijngbk)
 - [Download for Edge](https://microsoftedge.microsoft.com/addons/detail/dphelper-manager-dev-to/kphabkbdpaljlfagldhojilhfammepnk)
-
----
 
 ---
 
