@@ -24,7 +24,7 @@
 
 // --- array ---
   interface ArrayTool {
-    find<T>(array: T[], key: any): T | any
+    find<T>(array: T[], key: any): T
     unique<T>(array: T[]): T[]
     delete<T>(array: T[], key: keyof T): void
     merge<T>(arrayA: T[], arrayB: T[]): T[]

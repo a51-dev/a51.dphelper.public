@@ -1,20 +1,16 @@
 {
   "name": "dphelper",
   "codeName": "dphelper",
-  "version": "4.1.1",
+  "version": "4.5.2",
   "description": "dphelper devtools for developers",
   "main": "./index.cjs",
   "browser": "./index.cjs",
+  "type": "module",
   "types": "./index.d.ts",
   "typing": "./types/*",
   "license": "MIT",
   "copyright": "Dario Passariello",
   "author": "Dario Passariello",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "provenance": true
-  },
   "contributors": [
     {
       "name": "Dario Passariello",
@@ -57,29 +53,299 @@
     "node": ">=18.0.0"
   },
   "files": [
-    "**/*"
+    "index.js",
+    "index.cjs",
+    "index.d.ts",
+    "modules/**/*",
+    "types/**/*",
+    "README.md",
+    "LICENSE.md",
+    "COPYRIGHT.md",
+    "FUNDING.yml",
+    "SECURITY.md",
+    "SUMMARY.md",
+    "llms.txt",
+    "sbom.json"
   ],
   "support": {
     "name": "Dario Passariello",
     "url": "https://dario.passariello.ca/",
     "email": "dariopassariello@gmail.com"
   },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": false
-    },
-    "react-dom": {
-      "optional": false
-    }
+  "resolutions": {
+    "esbuild": "^0.25.0"
   },
-  "module": "./index.js",
+  "overrides": {
+    "esbuild": "^0.25.0"
+  },
   "exports": {
     ".": {
       "import": "./index.js",
       "require": "./index.cjs",
       "types": "./index.d.ts"
     },
-    "./types/*": "./types/*"
+    "./types/*": "./types/*",
+    "./ai": {
+      "import": "./modules/ai.js",
+      "require": "./modules/ai.cjs",
+      "types": "./modules/ai.d.ts"
+    },
+    "./anchor": {
+      "import": "./modules/anchor.js",
+      "require": "./modules/anchor.cjs",
+      "types": "./modules/anchor.d.ts"
+    },
+    "./array": {
+      "import": "./modules/array.js",
+      "require": "./modules/array.cjs",
+      "types": "./modules/array.d.ts"
+    },
+    "./audio": {
+      "import": "./modules/audio.js",
+      "require": "./modules/audio.cjs",
+      "types": "./modules/audio.d.ts"
+    },
+    "./avoid": {
+      "import": "./modules/avoid.js",
+      "require": "./modules/avoid.cjs",
+      "types": "./modules/avoid.d.ts"
+    },
+    "./biometric": {
+      "import": "./modules/biometric.js",
+      "require": "./modules/biometric.cjs",
+      "types": "./modules/biometric.d.ts"
+    },
+    "./browser": {
+      "import": "./modules/browser.js",
+      "require": "./modules/browser.cjs",
+      "types": "./modules/browser.d.ts"
+    },
+    "./check": {
+      "import": "./modules/check.js",
+      "require": "./modules/check.cjs",
+      "types": "./modules/check.d.ts"
+    },
+    "./color": {
+      "import": "./modules/color.js",
+      "require": "./modules/color.cjs",
+      "types": "./modules/color.d.ts"
+    },
+    "./compress": {
+      "import": "./modules/compress.js",
+      "require": "./modules/compress.cjs",
+      "types": "./modules/compress.d.ts"
+    },
+    "./cookie": {
+      "import": "./modules/cookie.js",
+      "require": "./modules/cookie.cjs",
+      "types": "./modules/cookie.d.ts"
+    },
+    "./coords": {
+      "import": "./modules/coords.js",
+      "require": "./modules/coords.cjs",
+      "types": "./modules/coords.d.ts"
+    },
+    "./credits": {
+      "import": "./modules/credits.js",
+      "require": "./modules/credits.cjs",
+      "types": "./modules/credits.d.ts"
+    },
+    "./date": {
+      "import": "./modules/date.js",
+      "require": "./modules/date.cjs",
+      "types": "./modules/date.d.ts"
+    },
+    "./disable": {
+      "import": "./modules/disable.js",
+      "require": "./modules/disable.cjs",
+      "types": "./modules/disable.d.ts"
+    },
+    "./dispatch": {
+      "import": "./modules/dispatch.js",
+      "require": "./modules/dispatch.cjs",
+      "types": "./modules/dispatch.d.ts"
+    },
+    "./elements": {
+      "import": "./modules/elements.js",
+      "require": "./modules/elements.cjs",
+      "types": "./modules/elements.d.ts"
+    },
+    "./events": {
+      "import": "./modules/events.js",
+      "require": "./modules/events.cjs",
+      "types": "./modules/events.d.ts"
+    },
+    "./fetch": {
+      "import": "./modules/fetch.js",
+      "require": "./modules/fetch.cjs",
+      "types": "./modules/fetch.d.ts"
+    },
+    "./form": {
+      "import": "./modules/form.js",
+      "require": "./modules/form.cjs",
+      "types": "./modules/form.d.ts"
+    },
+    "./format": {
+      "import": "./modules/format.js",
+      "require": "./modules/format.cjs",
+      "types": "./modules/format.d.ts"
+    },
+    "./i18n": {
+      "import": "./modules/i18n.js",
+      "require": "./modules/i18n.cjs",
+      "types": "./modules/i18n.d.ts"
+    },
+    "./image": {
+      "import": "./modules/image.js",
+      "require": "./modules/image.cjs",
+      "types": "./modules/image.d.ts"
+    },
+    "./json": {
+      "import": "./modules/json.js",
+      "require": "./modules/json.cjs",
+      "types": "./modules/json.d.ts"
+    },
+    "./load": {
+      "import": "./modules/load.js",
+      "require": "./modules/load.cjs",
+      "types": "./modules/load.d.ts"
+    },
+    "./logging": {
+      "import": "./modules/logging.js",
+      "require": "./modules/logging.cjs",
+      "types": "./modules/logging.d.ts"
+    },
+    "./math": {
+      "import": "./modules/math.js",
+      "require": "./modules/math.cjs",
+      "types": "./modules/math.d.ts"
+    },
+    "./memory": {
+      "import": "./modules/memory.js",
+      "require": "./modules/memory.cjs",
+      "types": "./modules/memory.d.ts"
+    },
+    "./navigation": {
+      "import": "./modules/navigation.js",
+      "require": "./modules/navigation.cjs",
+      "types": "./modules/navigation.d.ts"
+    },
+    "./net": {
+      "import": "./modules/net.js",
+      "require": "./modules/net.cjs",
+      "types": "./modules/net.d.ts"
+    },
+    "./objects": {
+      "import": "./modules/objects.js",
+      "require": "./modules/objects.cjs",
+      "types": "./modules/objects.d.ts"
+    },
+    "./path": {
+      "import": "./modules/path.js",
+      "require": "./modules/path.cjs",
+      "types": "./modules/path.d.ts"
+    },
+    "./promise": {
+      "import": "./modules/promise.js",
+      "require": "./modules/promise.cjs",
+      "types": "./modules/promise.d.ts"
+    },
+    "./sanitize": {
+      "import": "./modules/sanitize.js",
+      "require": "./modules/sanitize.cjs",
+      "types": "./modules/sanitize.d.ts"
+    },
+    "./screen": {
+      "import": "./modules/screen.js",
+      "require": "./modules/screen.cjs",
+      "types": "./modules/screen.d.ts"
+    },
+    "./scrollbar": {
+      "import": "./modules/scrollbar.js",
+      "require": "./modules/scrollbar.cjs",
+      "types": "./modules/scrollbar.d.ts"
+    },
+    "./security": {
+      "import": "./modules/security.js",
+      "require": "./modules/security.cjs",
+      "types": "./modules/security.d.ts"
+    },
+    "./shortcut": {
+      "import": "./modules/shortcut.js",
+      "require": "./modules/shortcut.cjs",
+      "types": "./modules/shortcut.d.ts"
+    },
+    "./socket": {
+      "import": "./modules/socket.js",
+      "require": "./modules/socket.cjs",
+      "types": "./modules/socket.d.ts"
+    },
+    "./sse": {
+      "import": "./modules/sse.js",
+      "require": "./modules/sse.cjs",
+      "types": "./modules/sse.d.ts"
+    },
+    "./svg": {
+      "import": "./modules/svg.js",
+      "require": "./modules/svg.cjs",
+      "types": "./modules/svg.d.ts"
+    },
+    "./sync": {
+      "import": "./modules/sync.js",
+      "require": "./modules/sync.cjs",
+      "types": "./modules/sync.d.ts"
+    },
+    "./system": {
+      "import": "./modules/system.js",
+      "require": "./modules/system.cjs",
+      "types": "./modules/system.d.ts"
+    },
+    "./text": {
+      "import": "./modules/text.js",
+      "require": "./modules/text.cjs",
+      "types": "./modules/text.d.ts"
+    },
+    "./timer": {
+      "import": "./modules/timer.js",
+      "require": "./modules/timer.cjs",
+      "types": "./modules/timer.d.ts"
+    },
+    "./tools": {
+      "import": "./modules/tools.js",
+      "require": "./modules/tools.cjs",
+      "types": "./modules/tools.d.ts"
+    },
+    "./translators": {
+      "import": "./modules/translators.js",
+      "require": "./modules/translators.cjs",
+      "types": "./modules/translators.d.ts"
+    },
+    "./triggers": {
+      "import": "./modules/triggers.js",
+      "require": "./modules/triggers.cjs",
+      "types": "./modules/triggers.d.ts"
+    },
+    "./types": {
+      "import": "./modules/types.js",
+      "require": "./modules/types.cjs",
+      "types": "./modules/types.d.ts"
+    },
+    "./ui": {
+      "import": "./modules/ui.js",
+      "require": "./modules/ui.cjs",
+      "types": "./modules/ui.d.ts"
+    },
+    "./window": {
+      "import": "./modules/window.js",
+      "require": "./modules/window.cjs",
+      "types": "./modules/window.d.ts"
+    },
+    "./worker": {
+      "import": "./modules/worker.js",
+      "require": "./modules/worker.cjs",
+      "types": "./modules/worker.d.ts"
+    }
   },
+  "module": "./index.js",
   "typings": "./index.d.ts"
 }

@@ -1,0 +1,48 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:4d36686e-42ff-4d6a-9a5c-2d1e0dff03a7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-13T06:43:36.784Z",
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": [
+      {
+        "vendor": "npm",
+        "name": "cli",
+        "version": "12.0.1"
+      }
+    ],
+    "component": {
+      "bom-ref": "dphelper@4.5.2",
+      "type": "library",
+      "name": "dphelper",
+      "version": "4.5.2",
+      "scope": "required",
+      "author": "Dario Passariello",
+      "description": "dphelper devtools for developers",
+      "purl": "pkg:npm/dphelper@4.5.2",
+      "properties": [],
+      "externalReferences": [],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "dphelper@4.5.2",
+      "dependsOn": []
+    }
+  ]
+}

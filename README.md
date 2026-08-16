@@ -5,18 +5,19 @@
 > **The supercharged toolkit for modern web development, AI engineering & DevTools.**
 
 [![version](https://img.shields.io/npm/v/dphelper.svg)](https://npmjs.org/package/dphelper)
-[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=dphelper&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=dphelper)
 [![downloads](https://img.shields.io/npm/dm/dphelper.svg)](https://npmjs.org/package/dphelper)
 
 ![Node.js](https://img.shields.io/badge/Node.js-gray?logo=node.js)
+![tsup](https://img.shields.io/badge/tsup-gray?logo=esbuild)
+
 ![React](https://img.shields.io/badge/React-gray?logo=React)
-![Javascript](https://img.shields.io/badge/Javascript-gray?logo=Javascript)
 ![TypeScript](https://img.shields.io/badge/TypeScript-gray?logo=typescript)
-![esbuild](https://img.shields.io/badge/esbuild-gray?logo=esbuild)
+![Javascript](https://img.shields.io/badge/Javascript-gray?logo=Javascript)
 
 ![Vitest](https://img.shields.io/badge/Vitest-gray?logo=vitest)
-![ESLint](https://img.shields.io/badge/Eslint-gray?logo=eslint)
-![Playwright](https://img.shields.io/badge/Playwright-gray?logo=playwright)
+![OXlint](https://img.shields.io/badge/Oxlint-gray?logo=oxc)
+[![E2E with Playwright](https://img.shields.io/badge/E2E%20with-Playwright-2ECC71.svg)](https://playwright.dev/)
+
 ![AI Ready](https://img.shields.io/badge/AI-Ready-brightgreen?logo=openai)
 ![TOON](https://img.shields.io/badge/TOON-Format-blue)
 
@@ -36,7 +37,7 @@
 
 ## About
 
-**dphelper** is a powerful, zero-dependency utility library that brings together **303 production-ready tools** for web developers, AI engineers, and DevTools creators.
+**dphelper** is a powerful, zero-dependency utility library that brings together **production-ready tools** for web developers, AI engineers, and DevTools creators.
 
 Think of it as your **universal toolbox** - from DOM manipulation to cryptographic operations, from real-time WebSocket handling to AI-powered token optimization. No more juggling multiple packages. One import, infinite possibilities.
 
@@ -86,6 +87,43 @@ Import it precisely **once** in your entry point (e.g., `index.js`, `main.ts`, o
 import "dphelper";
 ```
 
+### Modular imports
+
+For a smaller bundle or cleaner tree-shaking, import only the tool you need. Each modular entry point exposes the tool both as a **named export** and on the **global `dphelper`** object, so existing global-usage code keeps working unchanged.
+
+```ts
+import { sanitize } from "dphelper/sanitize"
+import { format } from "dphelper/format"
+import { fetch } from "dphelper/fetch"
+import { security } from "dphelper/security"
+
+sanitize.html("<strong>safe text</strong>")
+format.currency(1234.56, "en-US", "USD")
+await fetch.get("https://api.example.com")
+security.ulid()
+```
+
+The same tool is also available on the global after import:
+
+```ts
+import "dphelper/format"
+
+// Identical to the named export above
+dphelper.format.currency(1234.56, "en-US", "USD")
+```
+
+> [!NOTE]
+> Every tool under `tools/` is published as `dphelper/<tool>` (e.g. `dphelper/array`, `dphelper/i18n`, `dphelper/worker`). The full list is generated automatically from the `tools/` directory at build time, so adding a new tool creates its modular entry point with no extra configuration.
+
+> [!IMPORTANT]
+> **TypeScript + `resolvePackageJsonExports`:** Modular subpath imports (e.g. `import { sanitize } from "dphelper/sanitize"`) are resolved through the `exports` map in `dphelper`'s `package.json`. If your `tsconfig.json` sets `"resolvePackageJsonExports": false`, TypeScript will fall back to physical path resolution and fail with `Cannot find module 'dphelper/<tool>' or its corresponding type declarations` (TS2307), because the tool actually lives under `modules/<tool>` rather than at the package root.
+>
+> To fix it, either:
+> - keep `"resolvePackageJsonExports": true` (the default for `moduleResolution: "bundler"`), or
+> - import from the physical path: `import { sanitize } from "dphelper/modules/sanitize"`.
+>
+> Note: this is a TypeScript-only resolution issue. Vite and other bundlers resolve the subpath correctly at build/runtime via the `exports` map regardless of that flag.
+
 For plain HTML/CDN:
 
 ```html
@@ -94,7 +132,7 @@ For plain HTML/CDN:
 <!-- Optional check -->
 <script>
   console.debug(dphelper.version);  // latest version
-  console.debud(dphelper.isBrowser); // true
+  console.debug(dphelper.isBrowser); // true
 </script>
 ```
 
@@ -147,33 +185,6 @@ dphelper.i18n.number(1234.56, 'de-DE', { style: 'currency', currency: 'EUR' });
 // Relative time
 dphelper.i18n.relativeTime(Date.now() - 3600000); // "1 hour ago"
 ```
-
----
-
-## 🖼️ Image Module
-
-```javascript
-// Load image
-const img = await dphelper.image.load('photo.jpg');
-
-// Resize
-const resized = dphelper.image.resize(img, 100, 100);
-
-// Crop
-const cropped = dphelper.image.crop(img, { x: 0, y: 0, width: 50, height: 50 });
-
-// Apply filters
-const filtered = dphelper.image.filter(img, { brightness: 1.2, sepia: 0.5 });
-
-// Rotate/Flip
-const rotated = dphelper.image.rotate(img, 90);
-const flipped = dphelper.image.flip(img, 'horizontal');
-
-// Grayscale/Blur
-const gray = dphelper.image.grayscale(img);
-const blurred = dphelper.image.blur(img, 5);
-```
-
 ---
 
 ## 🗜️ Compression Module
